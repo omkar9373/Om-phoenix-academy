@@ -1,0 +1,37 @@
+/* Mentors Component Styles */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Modal Animations */
+@keyframes mentorModalBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes mentorModalContent {
+  from { 
+    opacity: 0; 
+    transform: scale(0.95) translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
+  }
+}
+
+.mentor-modal-overlay {
+  animation: mentorModalBackdrop 0.25s ease-out forwards;
+}
+
+.mentor-modal-card {
+  animation: mentorModalContent 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

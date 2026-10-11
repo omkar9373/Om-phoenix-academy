@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  /* Cyan/Blue from Logo */
+  --color-primary-50: #f0fbff;
+  --color-primary-100: #e0f6ff;
+  --color-primary-200: #baeaff;
+  --color-primary-300: #7cd9ff;
+  --color-primary-400: #36c5ff;
+  --color-primary-500: #00a8ff;
+  --color-primary-600: #0082d6;
+  --color-primary-700: #0067ab;
+  --color-primary-800: #00578c;
+  --color-primary-900: #004875;
+  
+  /* Orange/Red/Yellow Flame from Logo */
+  --color-secondary-50: #fff5ed;
+  --color-secondary-100: #ffe7d6;
+  --color-secondary-200: #ffcdab;
+  --color-secondary-300: #ffac75;
+  --color-secondary-400: #ff803d;
+  --color-secondary-500: #ff5700;
+  --color-secondary-600: #eb4300;
+  --color-secondary-700: #c22f00;
+  --color-secondary-800: #992500;
+  --color-secondary-900: #7d2105;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-slate-600 antialiased bg-slate-50;
+    font-family: 'Outfit', 'Poppins', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    @apply text-slate-900 tracking-tight;
+  }
+  h1 {
+    @apply text-5xl md:text-6xl font-extrabold leading-tight;
+  }
+  h2 {
+    @apply text-4xl md:text-[44px] font-bold leading-tight;
+  }
+  h3 {
+    @apply text-xl md:text-2xl font-bold leading-snug;
+  }
+  h4 {
+    @apply text-lg md:text-xl font-semibold leading-snug;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3 border border-transparent text-base font-semibold rounded-full text-white bg-primary-600 hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg duration-300;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-7 py-3 border-none text-base font-bold rounded-lg text-white bg-secondary-500 hover:bg-secondary-600 transition-colors shadow-sm duration-300;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-[0_10px_25px_-5px_rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-slate-100;
+  }
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dropdown {
+  animation: dropdownFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade {
+  animation: heroFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
