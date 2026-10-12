@@ -30,7 +30,7 @@ const Contact = () => {
     const message = formData.get('message');
 
     const whatsappMessage = `*New Contact Message*\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
-    const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/919860651233?text=${encodeURIComponent(whatsappMessage)}`;
 
     window.open(whatsappUrl, '_blank');
   };

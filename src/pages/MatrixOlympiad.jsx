@@ -85,8 +85,8 @@ const MatrixOlympiad = () => {
 
             <div className="pt-6 border-t border-gray-100 mt-6 text-center text-xs text-gray-500">
               Have questions? Call helpline:{' '}
-              <a href="tel:+919876543210" className="text-primary-600 font-semibold">
-                +91 98765 43210
+              <a href="tel:+919860651233" className="text-primary-600 font-semibold">
+                +91 98606 51233
               </a>
             </div>
           </div>

@@ -34,9 +34,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/fee-structure" element={<FeeStructure />} />
-            <Route path="/scholarships" element={<Scholarships />} />
-            <Route path="/matrix-olympiad" element={<MatrixOlympiad />} />
-            <Route path="/m-sat" element={<MSat />} />
+            <Route path="/scholarships/explorescholarships" element={<Scholarships />} />
+            <Route path="/scholarships/matrix-olympiad" element={<MatrixOlympiad />} />
+            <Route path="/scholarships/m-sat" element={<MSat />} />
             <Route path="/pay-m-sat-fee" element={<PayMSatFee />} />
             <Route path="/fee" element={<Navigate to="/fee-structure" replace />} />
             <Route path="/about" element={<About />} />

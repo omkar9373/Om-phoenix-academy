@@ -91,8 +91,8 @@ const FeeStructure = () => {
           {feePlans.map((plan) => (
             <div
               key={plan.title}
-              className={`bg-white rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-md ${
-                plan.popular ? 'border-primary-500 ring-2 ring-primary-500/20' : 'border-gray-200'
+              className={`group bg-white rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-xl hover:shadow-primary-500/10 hover:-translate-y-1.5 ${
+                plan.popular ? 'border-primary-500 ring-2 ring-primary-500/20 hover:border-primary-600' : 'border-gray-200 hover:border-primary-300'
               }`}
             >
               <div className="p-6">

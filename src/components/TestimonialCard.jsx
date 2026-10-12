@@ -3,8 +3,8 @@ import { Quote } from 'lucide-react';
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 relative h-full flex flex-col">
-      <div className="absolute top-6 right-8 text-primary-100">
+    <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:shadow-primary-500/10 border border-slate-100 hover:border-primary-200 hover:-translate-y-1.5 transition-all duration-300 relative h-full flex flex-col">
+      <div className="absolute top-6 right-8 text-primary-100 group-hover:text-primary-200 group-hover:scale-110 transition-all duration-300">
         <Quote className="w-12 h-12 rotate-180" />
       </div>
       

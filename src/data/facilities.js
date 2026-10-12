@@ -17,12 +17,7 @@ export const facilitiesList = [
     icon: "Laptop",
     description: "Access modern digital learning resources, presentations and educational tools to enhance classroom learning."
   },
-  {
-    id: 4,
-    title: "Well-Equipped Science Lab",
-    icon: "FlaskConical",
-    description: "Practical learning facilities that help students understand scientific concepts through experiments and activities."
-  },
+
   {
     id: 5,
     title: "Mathematics Learning Zone",
@@ -35,12 +30,7 @@ export const facilitiesList = [
     icon: "BookOpen",
     description: "A peaceful study environment with useful academic resources to support self-study and preparation."
   },
-  {
-    id: 7,
-    title: "Computer Lab",
-    icon: "Monitor",
-    description: "Computer facilities that help students develop digital skills and gain practical technology experience."
-  },
+
   {
     id: 8,
     title: "Comfortable Classrooms",

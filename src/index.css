@@ -62,7 +62,13 @@
     @apply inline-flex items-center justify-center px-7 py-3 border-none text-base font-bold rounded-lg text-white bg-secondary-500 hover:bg-secondary-600 transition-colors shadow-sm duration-300;
   }
   .card {
-    @apply bg-white rounded-2xl shadow-[0_10px_25px_-5px_rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-slate-100;
+    @apply bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_35px_-10px_rgba(0,103,171,0.14)] hover:-translate-y-1.5 hover:border-primary-200 transition-all duration-300 overflow-hidden border border-slate-100;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary-500/10 hover:border-primary-200;
+  }
+  .card-lift {
+    @apply transition-transform duration-300 ease-out hover:-translate-y-1.5;
   }
 }
 

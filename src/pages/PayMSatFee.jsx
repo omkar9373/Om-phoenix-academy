@@ -13,7 +13,7 @@ const PayMSatFee = () => {
     const grade = formData.get('grade');
 
     const message = `*M-SAT Fee Payment Request*\n\n*Student:* ${name}\n*Phone:* ${phone}\n*Class:* ${grade}\n*Test Fee:* ₹200`;
-    const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919860651233?text=${encodeURIComponent(message)}`;
 
     setSubmitted(true);
     window.open(whatsappUrl, '_blank');

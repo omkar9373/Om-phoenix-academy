@@ -72,16 +72,16 @@ const Scholarships = () => {
             return (
               <div
                 key={item.title}
-                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+                className="group bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-primary-300 shadow-sm hover:shadow-xl hover:shadow-primary-500/10 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between cursor-default"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-5 group-hover:bg-primary-600 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-xs">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-2xl font-extrabold text-primary-600 block mb-1">
+                  <span className="text-2xl font-extrabold text-primary-600 group-hover:text-primary-700 block mb-1 transition-colors">
                     {item.percentage}
                   </span>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">{item.title}</h3>
                   <p className="text-xs text-gray-600 leading-relaxed mb-4">{item.desc}</p>
                 </div>
                 <div className="pt-3 border-t border-gray-100 text-xs font-medium text-gray-500">
@@ -94,7 +94,7 @@ const Scholarships = () => {
         </div>
 
         {/* How to Apply Section */}
-        <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center">
+        <div className="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-3">How to Claim Your Scholarship?</h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm mb-8">
             Register online for M-SAT or submit your academic credentials during campus admission to get your scholarship approved instantly.

@@ -28,11 +28,11 @@ const Navbar = () => {
   };
 
   const feeDropdownItems = [
-    { name: 'Fee Structure', path: '/fee-structure' },
-    { name: 'Explore Scholarships', path: '/scholarships' },
-    { name: 'Apply for Matrix Olympiad', path: '/matrix-olympiad' },
-    { name: 'M-SAT (Admission Test)', path: '/m-sat' },
-    { name: 'Pay M-SAT Fee', path: '/pay-m-sat-fee' },
+
+    { name: 'Explore Scholarships', path: '/scholarships/explorescholarships' },
+    { name: 'Apply for Matrix Olympiad', path: '/scholarships/matrix-olympiad' },
+    { name: 'M-SAT (Admission Test)', path: '/scholarships/m-sat' },
+
   ];
 
   const resultsItems = [
@@ -52,7 +52,7 @@ const Navbar = () => {
 
   const links = [
     { name: 'Home', path: '/' },
-    { name: 'Fee & Scholarships', isDropdown: true, dropdownType: 'fee', items: feeDropdownItems },
+    { name: 'Scholarships', isDropdown: true, dropdownType: 'fee', items: feeDropdownItems },
     { name: 'Results', isDropdown: true, dropdownType: 'results', items: resultsItems },
     { name: 'About Us', path: '/about' },
     { name: 'Courses', path: '/courses' },
@@ -116,10 +116,9 @@ const Navbar = () => {
 
   /* ─── shared link class helpers ─────────────────────────────────────── */
   const desktopLinkCls = (active, open) =>
-    `inline-flex items-center gap-1 text-[13px] font-medium whitespace-nowrap transition-colors hover:text-primary-600 focus:outline-none cursor-pointer ${
-      active
-        ? 'text-primary-600 border-b-2 border-primary-600 pb-0.5'
-        : open
+    `inline-flex items-center gap-1 text-[13px] font-medium whitespace-nowrap transition-colors hover:text-primary-600 focus:outline-none cursor-pointer ${active
+      ? 'text-primary-600 border-b-2 border-primary-600 pb-0.5'
+      : open
         ? 'text-primary-600'
         : 'text-gray-600'
     }`;
@@ -171,9 +170,8 @@ const Navbar = () => {
                     >
                       <span>{link.name}</span>
                       <ChevronDown
-                        className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                          isFeeDropdownOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
-                        }`}
+                        className={`h-3.5 w-3.5 transition-transform duration-200 ${isFeeDropdownOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
+                          }`}
                       />
                     </button>
 
@@ -189,11 +187,10 @@ const Navbar = () => {
                             to={item.path}
                             onClick={() => setIsFeeDropdownOpen(false)}
                             role="menuitem"
-                            className={`block px-5 py-2.5 text-sm font-medium transition-colors ${
-                              isActive(item.path)
-                                ? 'bg-primary-50 text-primary-600 font-semibold'
-                                : 'text-gray-700 hover:bg-slate-50 hover:text-primary-600'
-                            } ${idx !== link.items.length - 1 ? 'border-b border-gray-50' : ''}`}
+                            className={`block px-5 py-2.5 text-sm font-medium transition-colors ${isActive(item.path)
+                              ? 'bg-primary-50 text-primary-600 font-semibold'
+                              : 'text-gray-700 hover:bg-slate-50 hover:text-primary-600'
+                              } ${idx !== link.items.length - 1 ? 'border-b border-gray-50' : ''}`}
                           >
                             {item.name}
                           </Link>
@@ -220,9 +217,8 @@ const Navbar = () => {
                     >
                       <span>{link.name}</span>
                       <ChevronDown
-                        className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                          isResultsDropdownOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
-                        }`}
+                        className={`h-3.5 w-3.5 transition-transform duration-200 ${isResultsDropdownOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
+                          }`}
                       />
                     </button>
 
@@ -244,15 +240,13 @@ const Navbar = () => {
                                 <button
                                   type="button"
                                   onClick={() => setIsJeeSubmenuOpen((p) => !p)}
-                                  className={`w-full flex items-center justify-between px-5 py-2.5 text-sm font-medium transition-colors text-gray-700 hover:bg-slate-50 hover:text-primary-600 ${
-                                    idx !== link.items.length - 1 ? 'border-b border-gray-50' : ''
-                                  }`}
+                                  className={`w-full flex items-center justify-between px-5 py-2.5 text-sm font-medium transition-colors text-gray-700 hover:bg-slate-50 hover:text-primary-600 ${idx !== link.items.length - 1 ? 'border-b border-gray-50' : ''
+                                    }`}
                                 >
                                   <span>{item.name}</span>
                                   <ChevronRight
-                                    className={`h-3.5 w-3.5 transition-colors ${
-                                      isJeeSubmenuOpen ? 'text-primary-600' : 'text-gray-400'
-                                    }`}
+                                    className={`h-3.5 w-3.5 transition-colors ${isJeeSubmenuOpen ? 'text-primary-600' : 'text-gray-400'
+                                      }`}
                                   />
                                 </button>
 
@@ -271,11 +265,10 @@ const Navbar = () => {
                                           setIsJeeSubmenuOpen(false);
                                         }}
                                         role="menuitem"
-                                        className={`block px-5 py-2.5 text-sm font-medium transition-colors ${
-                                          isActive(sub.path)
-                                            ? 'bg-primary-50 text-primary-600 font-semibold'
-                                            : 'text-gray-700 hover:bg-slate-50 hover:text-primary-600'
-                                        } ${subIdx !== item.submenu.length - 1 ? 'border-b border-gray-50' : ''}`}
+                                        className={`block px-5 py-2.5 text-sm font-medium transition-colors ${isActive(sub.path)
+                                          ? 'bg-primary-50 text-primary-600 font-semibold'
+                                          : 'text-gray-700 hover:bg-slate-50 hover:text-primary-600'
+                                          } ${subIdx !== item.submenu.length - 1 ? 'border-b border-gray-50' : ''}`}
                                       >
                                         {sub.name}
                                       </Link>
@@ -292,11 +285,10 @@ const Navbar = () => {
                               to={item.path}
                               onClick={() => setIsResultsDropdownOpen(false)}
                               role="menuitem"
-                              className={`block px-5 py-2.5 text-sm font-medium transition-colors ${
-                                isActive(item.path)
-                                  ? 'bg-primary-50 text-primary-600 font-semibold'
-                                  : 'text-gray-700 hover:bg-slate-50 hover:text-primary-600'
-                              } ${idx !== link.items.length - 1 ? 'border-b border-gray-50' : ''}`}
+                              className={`block px-5 py-2.5 text-sm font-medium transition-colors ${isActive(item.path)
+                                ? 'bg-primary-50 text-primary-600 font-semibold'
+                                : 'text-gray-700 hover:bg-slate-50 hover:text-primary-600'
+                                } ${idx !== link.items.length - 1 ? 'border-b border-gray-50' : ''}`}
                             >
                               {item.name}
                             </Link>
@@ -397,17 +389,15 @@ const Navbar = () => {
                     <button
                       type="button"
                       onClick={() => setIsMobileFeeOpen((p) => !p)}
-                      className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-[15px] font-medium transition-colors ${
-                        isFeeActive
-                          ? 'bg-primary-50 text-primary-700'
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
-                      }`}
+                      className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-[15px] font-medium transition-colors ${isFeeActive
+                        ? 'bg-primary-50 text-primary-700'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
+                        }`}
                     >
                       <span>{link.name}</span>
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-200 ${
-                          isMobileFeeOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
-                        }`}
+                        className={`h-4 w-4 transition-transform duration-200 ${isMobileFeeOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
+                          }`}
                       />
                     </button>
                     {isMobileFeeOpen && (
@@ -417,11 +407,10 @@ const Navbar = () => {
                             key={item.name}
                             to={item.path}
                             onClick={closeMenu}
-                            className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                              isActive(item.path)
-                                ? 'bg-primary-50 text-primary-700 font-semibold'
-                                : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600'
-                            }`}
+                            className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive(item.path)
+                              ? 'bg-primary-50 text-primary-700 font-semibold'
+                              : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600'
+                              }`}
                           >
                             {item.name}
                           </Link>
@@ -439,17 +428,15 @@ const Navbar = () => {
                     <button
                       type="button"
                       onClick={() => setIsMobileResultsOpen((p) => !p)}
-                      className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-[15px] font-medium transition-colors ${
-                        isResultsActive
-                          ? 'bg-primary-50 text-primary-700'
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
-                      }`}
+                      className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-[15px] font-medium transition-colors ${isResultsActive
+                        ? 'bg-primary-50 text-primary-700'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
+                        }`}
                     >
                       <span>{link.name}</span>
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-200 ${
-                          isMobileResultsOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
-                        }`}
+                        className={`h-4 w-4 transition-transform duration-200 ${isMobileResultsOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
+                          }`}
                       />
                     </button>
                     {isMobileResultsOpen && (
@@ -465,9 +452,8 @@ const Navbar = () => {
                                 >
                                   <span>{item.name}</span>
                                   <ChevronDown
-                                    className={`h-4 w-4 transition-transform duration-200 ${
-                                      isMobileJeeOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
-                                    }`}
+                                    className={`h-4 w-4 transition-transform duration-200 ${isMobileJeeOpen ? 'rotate-180 text-primary-600' : 'text-gray-400'
+                                      }`}
                                   />
                                 </button>
                                 {isMobileJeeOpen && (
@@ -477,11 +463,10 @@ const Navbar = () => {
                                         key={sub.name}
                                         to={sub.path}
                                         onClick={closeMenu}
-                                        className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                                          isActive(sub.path)
-                                            ? 'bg-primary-50 text-primary-700 font-semibold'
-                                            : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600'
-                                        }`}
+                                        className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive(sub.path)
+                                          ? 'bg-primary-50 text-primary-700 font-semibold'
+                                          : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600'
+                                          }`}
                                       >
                                         {sub.name}
                                       </Link>
@@ -496,11 +481,10 @@ const Navbar = () => {
                               key={item.name}
                               to={item.path}
                               onClick={closeMenu}
-                              className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                                isActive(item.path)
-                                  ? 'bg-primary-50 text-primary-700 font-semibold'
-                                  : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600'
-                              }`}
+                              className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive(item.path)
+                                ? 'bg-primary-50 text-primary-700 font-semibold'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600'
+                                }`}
                             >
                               {item.name}
                             </Link>
@@ -518,11 +502,10 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   onClick={closeMenu}
-                  className={`block px-3 py-2.5 rounded-lg text-[15px] font-medium transition-colors ${
-                    isActive(link.path)
-                      ? 'bg-primary-50 text-primary-700'
-                      : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
-                  }`}
+                  className={`block px-3 py-2.5 rounded-lg text-[15px] font-medium transition-colors ${isActive(link.path)
+                    ? 'bg-primary-50 text-primary-700'
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
+                    }`}
                 >
                   {link.name}
                 </Link>
