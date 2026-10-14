@@ -32,24 +32,24 @@ const NeetAnswerKey = () => {
   const optionColors = { A: 'bg-blue-100 text-blue-700', B: 'bg-green-100 text-green-700', C: 'bg-yellow-100 text-yellow-700', D: 'bg-red-100 text-red-700' };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="bg-slate-50">
       {/* Hero */}
       <section
-        className="relative py-20 overflow-hidden"
+        className="relative py-8 sm:py-10 overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #0c4a6e 0%, #0284c7 50%, #38bdf8 100%)' }}
       >
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-white blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-white blur-3xl" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold uppercase tracking-widest rounded-full bg-white/20 text-white border border-white/30">
+        <div className="relative w-full px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block px-4 py-1.5 mb-3 text-xs font-semibold uppercase tracking-widest rounded-full bg-white/20 text-white border border-white/30">
             Resources
           </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-3 leading-tight">
             NEET Answer Key
           </h1>
-          <p className="text-lg text-sky-100 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-sky-100 max-w-2xl mx-auto">
             Access the official NEET answer key prepared by our expert faculty. Cross-check your
             answers and estimate your score.
           </p>
@@ -57,16 +57,16 @@ const NeetAnswerKey = () => {
       </section>
 
       {/* Disclaimer */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800 text-center">
+      <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 sm:p-4 text-xs sm:text-sm text-amber-800 text-center">
           ⚠️ This is a <strong>sample answer key</strong> for demonstration. Official keys will be
           updated after exam day. Please verify with NTA's official website.
         </div>
       </section>
 
       {/* Subject Tabs */}
-      <section className="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex gap-2 mb-8 bg-white p-1.5 rounded-xl shadow-sm border border-slate-100 w-fit mx-auto">
+      <section className="py-4 sm:py-6 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex gap-2 mb-4 bg-white p-1.5 rounded-xl shadow-sm border border-slate-100 w-fit mx-auto">
           {subjects.map((sub) => (
             <button
               key={sub}
@@ -114,16 +114,16 @@ const NeetAnswerKey = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-12 bg-white border-t border-slate-100">
+      <section className="py-6 sm:py-8 bg-white border-t border-slate-100">
         <div className="max-w-3xl mx-auto text-center px-4">
-          <h3 className="text-2xl font-bold text-slate-900 mb-3">
-            Want to predict your rank?
+          <h3 className="text-2xl font-bold text-slate-900 mb-2">
+            Looking for Expert NEET Guidance?
           </h3>
-          <p className="text-slate-500 mb-6">
-            Use our NEET Rank Predictor to estimate where you stand.
+          <p className="text-slate-500 mb-4">
+            Connect with our mentors and explore dedicated NEET coaching programs at Om Phoenix Academy.
           </p>
-          <Link to="/results/neet-rank-predictor" className="btn-primary">
-            Try Rank Predictor
+          <Link to="/admission" className="btn-flame">
+            Apply for Admission
           </Link>
         </div>
       </section>

@@ -45,10 +45,10 @@ const StatsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 lg:py-24"
+      className="py-0"
       style={{ background: 'linear-gradient(180deg, #071f35 0%, #0a2540 100%)' }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {stats.map(({ icon: Icon, value, label }, index) => (
             <div
@@ -83,12 +83,12 @@ const StatsSection = () => {
                 style={{
                   width: '60px',
                   height: '60px',
-                  background: 'rgba(21,150,209,0.15)',
-                  border: '1px solid rgba(21,150,209,0.30)',
+                  background: 'rgba(0,168,255,0.15)',
+                  border: '1px solid rgba(0,168,255,0.35)',
                 }}
               >
                 <Icon
-                  style={{ width: '30px', height: '30px', color: '#1596D1', strokeWidth: 1.75 }}
+                  style={{ width: '30px', height: '30px', color: '#00A8FF', strokeWidth: 1.75 }}
                 />
               </div>
 

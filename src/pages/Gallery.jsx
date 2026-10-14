@@ -76,12 +76,12 @@ const Gallery = () => {
   const currentItem = selectedImageIndex !== null ? filteredItems[selectedImageIndex] : null;
 
   return (
-    <div className="py-16 md:py-20 bg-slate-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-4 sm:py-6 bg-slate-50">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full bg-primary-100 text-primary-800 text-xs font-bold tracking-wider uppercase mb-4 border border-primary-200">
+        <div className="text-center max-w-3xl mx-auto mb-6">
+          <span className="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full bg-primary-100 text-primary-800 text-xs font-bold tracking-wider uppercase mb-3 border border-primary-200">
             <Sparkles className="w-3.5 h-3.5 text-primary-600" />
             Academy Memories & Moments
           </span>
@@ -92,7 +92,7 @@ const Gallery = () => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-6">
           {galleryCategories.map((category) => {
             const Icon = categoryIcons[category] || ImageIcon;
             const count = category === 'All' 
@@ -131,37 +131,46 @@ const Gallery = () => {
             <div
               key={item.id}
               onClick={() => openLightbox(index)}
-              className="group relative bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col"
+              className="group relative bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-2xl hover:shadow-primary-500/15 hover:border-primary-300 hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer flex flex-col"
             >
               {/* Image Container with fixed height and neutral background for clean framing */}
-              <div className="relative h-80 sm:h-96 w-full overflow-hidden bg-slate-900 flex items-center justify-center">
+              <div className="relative h-80 sm:h-96 w-full overflow-hidden bg-slate-950 flex items-center justify-center">
+                {/* Ambient blurred background */}
+                <img
+                  src={item.image}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover blur-md opacity-25 scale-110 pointer-events-none"
+                />
+
+                {/* Main full image: object-contain ensures 100% of the flyer is visible without clipping */}
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  className="relative z-1 max-h-full max-w-full w-auto h-auto object-contain p-1.5 group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                   loading="lazy"
                 />
 
-                {/* Subtle top gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20 opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                {/* Hover Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
 
                 {/* Badge Tag */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-md text-slate-800 shadow-sm border border-white/40">
+                <div className="absolute top-3 left-3 z-20">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-md text-slate-800 shadow-sm border border-white/40">
                     {item.tag}
                   </span>
                 </div>
 
                 {/* Center Hover Expand Icon */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
                   <div className="w-12 h-12 rounded-full bg-primary-600/90 text-white flex items-center justify-center shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300 backdrop-blur-xs">
                     <Maximize2 className="w-5 h-5" />
                   </div>
                 </div>
 
-                {/* Bottom title text preview on image */}
-                <div className="absolute bottom-0 inset-x-0 p-4 text-white z-10">
-                  <h3 className="text-lg font-bold text-white leading-snug drop-shadow-md">
+                {/* Bottom title text preview on image - visible on hover so it does not block the poster text */}
+                <div className="absolute bottom-0 inset-x-0 p-4 text-white z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <h3 className="text-base sm:text-lg font-bold text-white leading-snug drop-shadow-md">
                     {item.title}
                   </h3>
                   <p className="text-xs text-slate-200 line-clamp-1 mt-1 opacity-90">
@@ -171,11 +180,16 @@ const Gallery = () => {
               </div>
 
               {/* Bottom Card Info bar */}
-              <div className="p-4 bg-white flex items-center justify-between border-t border-slate-100">
-                <span className="text-xs font-medium text-slate-500">
-                  {item.category}
-                </span>
-                <span className="text-xs font-semibold text-primary-600 group-hover:translate-x-0.5 transition-transform">
+              <div className="p-3.5 bg-white flex items-center justify-between border-t border-slate-100">
+                <div className="truncate pr-2">
+                  <span className="text-xs font-semibold text-slate-800 truncate block">
+                    {item.title}
+                  </span>
+                  <span className="text-[11px] font-medium text-slate-400">
+                    {item.category}
+                  </span>
+                </div>
+                <span className="text-xs font-semibold text-primary-600 shrink-0 group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
                   View Photo &rarr;
                 </span>
               </div>

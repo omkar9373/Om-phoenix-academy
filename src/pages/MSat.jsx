@@ -43,15 +43,15 @@ const MSat = () => {
   ];
 
   return (
-    <div className="py-20 bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="pt-2 sm:pt-4 pb-0 bg-gray-50">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="M-SAT (Admission Test)"
           subtitle="Matrix Scholarship and Admission Test — evaluate aptitude and secure merit-based fee concessions."
         />
 
         {/* Hero Card */}
-        <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-primary-200 transition-all duration-300 mb-16">
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-primary-200 transition-all duration-300 mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-2 space-y-4">
               <span className="inline-flex items-center gap-1.5 bg-primary-50 text-primary-700 text-xs font-semibold px-3.5 py-1 rounded-full uppercase tracking-wider border border-primary-100">
@@ -115,20 +115,14 @@ const MSat = () => {
                 >
                   Register Now
                 </Link>
-                <Link
-                  to="/pay-m-sat-fee"
-                  className="w-full bg-primary-800/80 hover:bg-primary-800 border border-white/20 text-white font-semibold py-3 px-4 rounded-xl text-sm block transition-all duration-300 hover:border-white/40"
-                >
-                  Pay Test Fee
-                </Link>
               </div>
             </div>
           </div>
         </div>
 
         {/* Process Steps Section */}
-        <div className="mb-16">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="mb-6 pb-0">
+          <div className="text-center max-w-2xl mx-auto mb-6">
             <span className="text-xs font-bold uppercase tracking-wider text-primary-600 bg-primary-50 px-3.5 py-1.5 rounded-full border border-primary-100 inline-block mb-3">
               Simple 3-Step Journey
             </span>

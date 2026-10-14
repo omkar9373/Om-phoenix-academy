@@ -114,13 +114,13 @@ const Mentors = () => {
 
   return (
     <section 
-      className="py-20 lg:py-28 bg-[#F8FAFC] overflow-hidden relative"
+      className="py-0 bg-[#F8FAFC] overflow-hidden relative"
       id="mentors"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* 1. Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-14 lg:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8 lg:mb-10">
           <span className="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-[#E8F5FC] text-[#168BD1] text-xs sm:text-sm font-bold tracking-wider uppercase mb-3 border border-[#168BD1]/20">
             <Sparkles className="w-4 h-4 text-[#F59E0B]" />
             Faculty & Mentors
@@ -128,7 +128,7 @@ const Mentors = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A1F35] tracking-tight mb-4">
             Meet Our Expert Mentors & Teachers
           </h2>
-          <div className="w-20 h-1.5 bg-[#168BD1] mx-auto rounded-full mb-6"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary-500 via-secondary-500 to-[#e11d48] mx-auto rounded-full mb-6"></div>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Learn from experienced educators who inspire, guide, and empower students to achieve academic excellence.
           </p>
@@ -211,7 +211,7 @@ const Mentors = () => {
         </div>
 
         {/* 7. Carousel Controls (Navigation Arrows & Pagination Dots) */}
-        <div className="flex flex-col items-center justify-center gap-3 mt-10">
+        <div className="flex flex-col items-center justify-center gap-3 mt-6 mb-4">
           {/* Previous / Next Arrow Buttons */}
           <div className="flex items-center gap-2">
             <button

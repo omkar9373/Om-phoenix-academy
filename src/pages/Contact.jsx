@@ -36,11 +36,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50">
 
       {/* ── Hero banner ──────────────────────────────────────────────────── */}
       <div
-        className="relative py-20 overflow-hidden"
+        className="relative py-8 sm:py-10 overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #004875 0%, #0082d6 55%, #36c5ff 100%)',
         }}
@@ -49,34 +49,34 @@ const Contact = () => {
           <div className="absolute -top-10 -left-10 w-80 h-80 rounded-full bg-white blur-3xl" />
           <div className="absolute -bottom-10 -right-10 w-96 h-96 rounded-full bg-white blur-3xl" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold uppercase tracking-widest rounded-full bg-white/20 text-white border border-white/30">
+        <div className="relative w-full px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block px-4 py-1.5 mb-3 text-xs font-semibold uppercase tracking-widest rounded-full bg-white/20 text-white border border-white/30">
             Get In Touch
           </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-3 leading-tight">
             Contact Us
           </h1>
-          <p className="text-lg text-blue-100 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-blue-100 max-w-2xl mx-auto">
             Get in touch with us for any queries about admissions, courses, or campus visits.
           </p>
         </div>
       </div>
 
       {/* ── Contact form + info cards ────────────────────────────────────── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Contact Info cards */}
           <div className="space-y-6">
             {/* Address */}
-            <div className="flex items-start gap-4 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="bg-primary-50 p-3 rounded-full text-primary-600 shrink-0">
+            <div className="group flex items-start gap-4 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:shadow-primary-500/10 hover:border-primary-300 hover:-translate-y-1.5 transition-all duration-300 ease-out">
+              <div className="bg-primary-50 p-3 rounded-xl text-primary-600 shrink-0 group-hover:bg-primary-600 group-hover:text-white group-hover:scale-105 transition-all duration-300 ease-out shadow-2xs">
                 <MapPin className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-1 text-gray-900">Our Location</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="font-bold text-lg mb-1 text-gray-900 group-hover:text-primary-600 transition-colors">Our Location</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
                   Shakuntal Commercia Building, Office No. 233, 2nd Floor,
                   Near City Pride School, Dehu-Moshi Road, Jadhavwadi, Moshi, Maharashtra.
                 </p>
@@ -84,18 +84,18 @@ const Contact = () => {
             </div>
 
             {/* Phone */}
-            <div className="flex items-start gap-4 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="bg-primary-50 p-3 rounded-full text-primary-600 shrink-0">
+            <div className="group flex items-start gap-4 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:shadow-primary-500/10 hover:border-primary-300 hover:-translate-y-1.5 transition-all duration-300 ease-out">
+              <div className="bg-primary-50 p-3 rounded-xl text-primary-600 shrink-0 group-hover:bg-primary-600 group-hover:text-white group-hover:scale-105 transition-all duration-300 ease-out shadow-2xs">
                 <Phone className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">Phone Numbers</h3>
+                <h3 className="font-bold text-lg mb-2 text-gray-900 group-hover:text-primary-600 transition-colors">Phone Numbers</h3>
                 <div className="space-y-1">
                   {BRANCH.phones.map((p) => (
                     <a
                       key={p.tel}
                       href={`tel:${p.tel}`}
-                      className="block text-gray-600 hover:text-primary-600 transition-colors font-medium"
+                      className="block text-gray-600 hover:text-primary-600 transition-colors font-medium text-sm"
                     >
                       📞 {p.display}
                     </a>
@@ -105,15 +105,15 @@ const Contact = () => {
             </div>
 
             {/* Email */}
-            <div className="flex items-start gap-4 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="bg-primary-50 p-3 rounded-full text-primary-600 shrink-0">
+            <div className="group flex items-start gap-4 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:shadow-primary-500/10 hover:border-primary-300 hover:-translate-y-1.5 transition-all duration-300 ease-out">
+              <div className="bg-primary-50 p-3 rounded-xl text-primary-600 shrink-0 group-hover:bg-primary-600 group-hover:text-white group-hover:scale-105 transition-all duration-300 ease-out shadow-2xs">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-1 text-gray-900">Email Address</h3>
+                <h3 className="font-bold text-lg mb-1 text-gray-900 group-hover:text-primary-600 transition-colors">Email Address</h3>
                 <a
                   href="mailto:info@omphoenix.edu"
-                  className="text-gray-600 hover:text-primary-600 transition-colors"
+                  className="text-gray-600 hover:text-primary-600 transition-colors text-sm font-medium"
                 >
                   info@omphoenix.edu
                 </a>
@@ -155,7 +155,7 @@ const Contact = () => {
                   placeholder="Your Message"
                 />
               </div>
-              <button type="submit" className="w-full btn-primary py-3 rounded-xl">
+              <button type="submit" className="w-full btn-flame py-3 rounded-xl font-bold">
                 Send Message
               </button>
             </form>
@@ -164,8 +164,8 @@ const Contact = () => {
       </div>
 
       {/* ── Map + Branch card section ──────────────────────────────────────── */}
-      <section className="bg-white border-t border-gray-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-white border-t border-gray-100 py-0">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
 
           <SectionTitle
             title="Visit Our Moshi Branch"

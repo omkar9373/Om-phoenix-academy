@@ -103,7 +103,7 @@ const PopularCoursesOverlap = () => {
 
   return (
     <section 
-      className="-mt-14 sm:-mt-16 md:-mt-20 lg:-mt-22 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16"
+      className="-mt-14 sm:-mt-16 md:-mt-20 lg:-mt-22 relative z-20 w-full px-4 sm:px-6 lg:px-8 mb-0"
       aria-label="Popular Courses Navigation"
     >
       {/* White Overlapping Container */}
@@ -111,7 +111,7 @@ const PopularCoursesOverlap = () => {
         
         {/* Top Header Badge */}
         <div className="flex items-center justify-between mb-5 sm:mb-6">
-          <div className="inline-flex items-center px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-[#fde047] text-slate-950 font-black text-sm sm:text-base tracking-wide shadow-xs">
+          <div className="inline-flex items-center px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-[#ffb800] to-[#ff5e00] text-slate-950 font-black text-sm sm:text-base tracking-wide shadow-xs">
             <span>Popular Courses</span>
           </div>
 

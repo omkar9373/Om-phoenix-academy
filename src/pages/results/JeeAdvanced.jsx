@@ -11,10 +11,10 @@ const JeeAdvanced = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="bg-slate-50">
       {/* Hero */}
       <section
-        className="relative py-20 overflow-hidden"
+        className="relative py-0 overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #004875 0%, #0082d6 50%, #36c5ff 100%)',
         }}
@@ -23,7 +23,7 @@ const JeeAdvanced = () => {
           <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-white blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-white blur-3xl" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative w-full px-4 sm:px-6 lg:px-8 text-center py-6 sm:py-8">
           <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold uppercase tracking-widest rounded-full bg-white/20 text-white border border-white/30">
             Results
           </span>
@@ -50,19 +50,19 @@ const JeeAdvanced = () => {
       </section>
 
       {/* Toppers Grid */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-slate-900 mb-2 text-center">Our IIT Qualifiers</h2>
-        <p className="text-slate-500 text-center mb-10">
+      <section className="py-0 w-full px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-slate-900 mb-2 mt-6 text-center">Our IIT Qualifiers</h2>
+        <p className="text-slate-500 text-center mb-6">
           Proud achievers from Om Phoenix Learning Academy
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {toppers.map((topper) => (
             <div
               key={topper.name}
-              className="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-shadow duration-300 p-6 flex flex-col items-center text-center"
+              className="group bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:shadow-[#0082d6]/15 hover:border-[#0082d6]/40 hover:-translate-y-1.5 transition-all duration-300 ease-out p-6 flex flex-col items-center text-center"
             >
               <div
-                className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-extrabold text-white mb-4"
+                className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-extrabold text-white mb-4 group-hover:scale-105 transition-transform duration-300 ease-out shadow-xs"
                 style={{ background: 'linear-gradient(135deg, #0082d6, #36c5ff)' }}
               >
                 {topper.name.charAt(0)}
@@ -90,8 +90,8 @@ const JeeAdvanced = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-12 bg-white border-t border-slate-100">
-        <div className="max-w-3xl mx-auto text-center px-4">
+      <section className="py-0 bg-white border-t border-slate-100">
+        <div className="w-full text-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <h3 className="text-2xl font-bold text-slate-900 mb-3">
             Be the next IIT qualifier from our academy!
           </h3>
@@ -99,7 +99,7 @@ const JeeAdvanced = () => {
             Enrol today and benefit from expert guidance, rigorous practice, and a proven track
             record.
           </p>
-          <Link to="/admission" className="btn-primary">
+          <Link to="/admission" className="btn-flame">
             Apply Now
           </Link>
         </div>
