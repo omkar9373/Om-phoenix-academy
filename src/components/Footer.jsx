@@ -1,42 +1,50 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Globe, MessageCircle, Share2, MapPin, Phone, Mail } from 'lucide-react';
+import { Globe, MessageCircle, Share2, MapPin, Phone, Mail } from 'lucide-react';
+import logo from '../assets/om-academy logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-[#071f38] text-slate-300 pt-8 sm:pt-10 pb-5 border-t border-[#00a8ff]/20">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
           
           {/* Brand & About */}
-          <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="bg-primary-600 p-1.5 rounded-lg">
-                <BookOpen className="h-6 w-6 text-white" />
+          <div className="space-y-3">
+            <Link to="/" className="flex items-center gap-3">
+              <img 
+                src={logo} 
+                alt="Om Phoenix Learning Academy" 
+                className="h-10 w-auto object-contain bg-white/10 p-1 rounded-xl backdrop-blur-xs" 
+              />
+              <div className="flex flex-col leading-none">
+                <span className="font-extrabold text-base sm:text-lg text-white tracking-tight">
+                  OM PHOENIX
+                </span>
+                <span className="text-[10px] sm:text-[11px] font-semibold text-primary-400 tracking-wider uppercase mt-0.5">
+                  Learning Academy
+                </span>
               </div>
-              <span className="font-bold text-xl text-white leading-tight">
-                Om Phoenix <br /> Academy
-              </span>
             </Link>
-            <p className="text-sm text-gray-400 mt-4">
+            <p className="text-xs sm:text-sm text-gray-400 mt-2 line-clamp-3">
               Empowering students with quality education for JEE, NEET, MHT-CET, and Foundation courses to achieve their academic dreams.
             </p>
-            <div className="flex space-x-4 pt-2">
+            <div className="flex space-x-3 pt-1">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Globe className="h-5 w-5" />
+                <Globe className="h-4.5 w-4.5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <MessageCircle className="h-5 w-5" />
+                <MessageCircle className="h-4.5 w-4.5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Share2 className="h-5 w-5" />
+                <Share2 className="h-4.5 w-4.5" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="text-white font-semibold text-base mb-3">Quick Links</h3>
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li><Link to="/about" className="hover:text-primary-400 transition-colors">About Us</Link></li>
               <li><Link to="/courses" className="hover:text-primary-400 transition-colors">Our Courses</Link></li>
               <li><Link to="/admission" className="hover:text-primary-400 transition-colors">Admission</Link></li>
@@ -47,8 +55,8 @@ const Footer = () => {
 
           {/* Useful Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Support</h3>
-            <ul className="space-y-3">
+            <h3 className="text-white font-semibold text-base mb-3">Support</h3>
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li><Link to="/faq" className="hover:text-primary-400 transition-colors">FAQ</Link></li>
               <li><Link to="/testimonials" className="hover:text-primary-400 transition-colors">Testimonials</Link></li>
               <li><Link to="/contact" className="hover:text-primary-400 transition-colors">Contact Us</Link></li>
@@ -59,29 +67,29 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary-500 shrink-0 mt-0.5" />
-                <span className="text-sm">123 Education Hub, Knowledge Park, Pune, Maharashtra 411001</span>
+            <h3 className="text-white font-semibold text-base mb-3">Contact Us</h3>
+            <ul className="space-y-2.5">
+              <li className="flex items-start gap-2.5">
+                <MapPin className="h-4.5 w-4.5 text-primary-500 shrink-0 mt-0.5" />
+                <span className="text-xs sm:text-sm">Office No. 233, 2nd Floor, Shakuntal Commercia, Dehu-Moshi Road, Moshi, Pune 412105</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-primary-500 shrink-0" />
-                <span className="text-sm">+91 98765 43210</span>
+              <li className="flex items-center gap-2.5">
+                <Phone className="h-4.5 w-4.5 text-[#ff8a00] shrink-0" />
+                <a href="tel:8378903312" className="text-xs sm:text-sm hover:text-white transition-colors">+91 83789 03312 / 98606 51233</a>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary-500 shrink-0" />
-                <span className="text-sm">info@omphoenix.edu</span>
+              <li className="flex items-center gap-2.5">
+                <Mail className="h-4.5 w-4.5 text-[#00a8ff] shrink-0" />
+                <a href="mailto:info@omphoenix.edu" className="text-xs sm:text-sm hover:text-white transition-colors">info@omphoenix.edu</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
+        <div className="border-t border-white/10 pt-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+          <p>
             &copy; {new Date().getFullYear()} Om Phoenix Learning Academy. All rights reserved.
           </p>
-          <p className="text-sm text-gray-500">
+          <p>
             Designed for Excellence
           </p>
         </div>

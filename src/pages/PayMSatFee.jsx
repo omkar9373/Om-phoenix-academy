@@ -20,14 +20,14 @@ const PayMSatFee = () => {
   };
 
   return (
-    <div className="py-20 bg-gray-50 min-h-screen">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-4 sm:py-6 bg-gray-50">
+      <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="Pay M-SAT Fee"
           subtitle="Complete your examination registration fee payment securely."
         />
 
-        <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm mb-8">
+        <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm mb-4">
           {/* Fee Header */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-gray-100 mb-6">
             <div>
@@ -118,7 +118,7 @@ const PayMSatFee = () => {
 
               <button
                 type="submit"
-                className="w-full btn-primary py-3.5 flex items-center justify-center gap-2 text-base font-semibold shadow-md mt-6"
+                className="w-full btn-flame py-3.5 flex items-center justify-center gap-2 text-base font-semibold shadow-md mt-6"
               >
                 <CreditCard className="w-5 h-5" />
                 <span>Proceed to Pay ₹200</span>

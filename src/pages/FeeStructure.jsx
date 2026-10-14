@@ -59,15 +59,15 @@ const FeeStructure = () => {
   ];
 
   return (
-    <div className="py-20 bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-4 sm:py-6 bg-gray-50">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="Fee Structure"
           subtitle="Transparent, value-focused fee details and flexible payment plans for all academic courses."
         />
 
         {/* Info Banner */}
-        <div className="bg-primary-50 border border-primary-200 rounded-2xl p-6 mb-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-gradient-to-r from-primary-50 via-white to-secondary-50 border border-primary-200/80 rounded-2xl p-6 mb-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-xs">
           <div>
             <h3 className="text-xl font-bold text-primary-900 mb-1">
               Looking for Fee Concessions &amp; Scholarships?
@@ -76,18 +76,18 @@ const FeeStructure = () => {
               Students can avail up to 100% scholarship on tuition fees through our M-SAT entrance test.
             </p>
           </div>
-          <div className="flex gap-3 shrink-0">
-            <Link to="/m-sat" className="btn-primary py-2.5 px-5 text-sm">
+          <div className="flex flex-wrap gap-3 shrink-0">
+            <Link to="/scholarships/m-sat" className="btn-flame py-2.5 px-5 text-xs sm:text-sm">
               Register for M-SAT
             </Link>
-            <Link to="/scholarships" className="inline-flex items-center px-5 py-2.5 rounded-full border border-primary-300 text-sm font-semibold text-primary-700 hover:bg-primary-100 transition-colors">
+            <Link to="/scholarships/explorescholarships" className="inline-flex items-center px-5 py-2.5 rounded-full border border-primary-300 text-sm font-semibold text-primary-700 hover:bg-primary-100 transition-colors">
               View Scholarships
             </Link>
           </div>
         </div>
 
         {/* Fee Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {feePlans.map((plan) => (
             <div
               key={plan.title}
@@ -97,7 +97,7 @@ const FeeStructure = () => {
             >
               <div className="p-6">
                 {plan.popular && (
-                  <span className="inline-block bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+                  <span className="inline-block bg-gradient-to-r from-[#ffb800] via-[#ff5e00] to-[#e11d48] text-white text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider mb-3 shadow-xs">
                     Most Popular
                   </span>
                 )}

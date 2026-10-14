@@ -15,13 +15,11 @@ import FeeStructure from './pages/FeeStructure';
 import Scholarships from './pages/Scholarships';
 import MatrixOlympiad from './pages/MatrixOlympiad';
 import MSat from './pages/MSat';
-import PayMSatFee from './pages/PayMSatFee';
 import JeeAdvanced from './pages/results/JeeAdvanced';
 import JeeMain from './pages/results/JeeMain';
 import Neet from './pages/results/Neet';
 import Olympiads from './pages/results/Olympiads';
 import NeetAnswerKey from './pages/results/NeetAnswerKey';
-import NeetRankPredictor from './pages/results/NeetRankPredictor';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -37,7 +35,7 @@ function App() {
             <Route path="/scholarships/explorescholarships" element={<Scholarships />} />
             <Route path="/scholarships/matrix-olympiad" element={<MatrixOlympiad />} />
             <Route path="/scholarships/m-sat" element={<MSat />} />
-            <Route path="/pay-m-sat-fee" element={<PayMSatFee />} />
+            <Route path="/pay-m-sat-fee" element={<Navigate to="/scholarships/m-sat" replace />} />
             <Route path="/fee" element={<Navigate to="/fee-structure" replace />} />
             <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />
@@ -53,7 +51,6 @@ function App() {
             <Route path="/results/neet" element={<Neet />} />
             <Route path="/results/olympiads" element={<Olympiads />} />
             <Route path="/results/neet-answer-key" element={<NeetAnswerKey />} />
-            <Route path="/results/neet-rank-predictor" element={<NeetRankPredictor />} />
           </Routes>
         </main>
         <Footer />

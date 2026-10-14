@@ -114,42 +114,42 @@ export const galleryImages = [
     title: "Smart Classroom",
     category: "Modern Infrastructure",
     image: "/images/facilities/smart-classroom.jpg",
-    span: "col-span-1 md:col-span-2 md:row-span-2"
+    objectPosition: "center center"
   },
   {
     id: 2,
     title: "Science Learning Lab",
     category: "Practical Facilities",
     image: "/images/facilities/science-lab.jpg",
-    span: "col-span-1 md:col-span-1"
-  },
-  {
-    id: 3,
-    title: "Learning Environment",
-    category: "Academic Life",
-    image: "/images/facilities/facilities-hero.png",
-    span: "col-span-1 md:col-span-1"
+    objectPosition: "center center"
   },
   {
     id: 4,
     title: "Faculty Interaction & Mentoring",
     category: "Guidance",
     image: "/images/facilities/mentorship-guidance.png",
-    span: "col-span-1 md:col-span-1"
+    objectPosition: "center 18%"
   },
   {
     id: 5,
     title: "Mathematics Learning Zone",
     category: "Focus Sessions",
     image: "/images/facilities/math-zone.jpg",
-    span: "col-span-1 md:col-span-1"
+    objectPosition: "center 22%"
+  },
+  {
+    id: 3,
+    title: "Learning Environment",
+    category: "Academic Life",
+    image: "/images/facilities/facilities-hero.png",
+    objectPosition: "center center"
   },
   {
     id: 6,
     title: "Student Activities & Celebrations",
     category: "Campus Events",
     image: "/images/facilities/interactive-learning.jpg",
-    span: "col-span-1 md:col-span-2"
+    objectPosition: "center center"
   }
 ];
 

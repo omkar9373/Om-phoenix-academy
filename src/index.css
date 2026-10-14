@@ -1,29 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cyan/Blue from Logo */
-  --color-primary-50: #f0fbff;
-  --color-primary-100: #e0f6ff;
-  --color-primary-200: #baeaff;
-  --color-primary-300: #7cd9ff;
-  --color-primary-400: #36c5ff;
+  /* Om Phoenix Icon Primary: Cyan & Electric Blue (From Wing & OM PHOENIX text) */
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
   --color-primary-500: #00a8ff;
   --color-primary-600: #0082d6;
   --color-primary-700: #0067ab;
-  --color-primary-800: #00578c;
-  --color-primary-900: #004875;
+  --color-primary-800: #005087;
+  --color-primary-900: #0a2540;
+  --color-primary-950: #05162b;
   
-  /* Orange/Red/Yellow Flame from Logo */
-  --color-secondary-50: #fff5ed;
-  --color-secondary-100: #ffe7d6;
-  --color-secondary-200: #ffcdab;
-  --color-secondary-300: #ffac75;
-  --color-secondary-400: #ff803d;
-  --color-secondary-500: #ff5700;
-  --color-secondary-600: #eb4300;
-  --color-secondary-700: #c22f00;
-  --color-secondary-800: #992500;
-  --color-secondary-900: #7d2105;
+  /* Om Phoenix Icon Secondary: Fiery Orange & Scarlet Flame (From Phoenix Bird) */
+  --color-secondary-50: #fff7ed;
+  --color-secondary-100: #ffedd5;
+  --color-secondary-200: #fed7aa;
+  --color-secondary-300: #fdba74;
+  --color-secondary-400: #fb923c;
+  --color-secondary-500: #ff5e00;
+  --color-secondary-600: #ea580c;
+  --color-secondary-700: #c2410c;
+  --color-secondary-800: #9a3412;
+  --color-secondary-900: #7c2d12;
+  --color-secondary-950: #431407;
+
+  /* Om Phoenix Flame Accents */
+  --color-flame-gold: #ffb800;
+  --color-flame-amber: #f59e0b;
+  --color-flame-orange: #ff5e00;
+  --color-flame-crimson: #e11d48;
+  --color-flame-scarlet: #dc2626;
+
+  /* Om Phoenix Wing Emerald Touch */
+  --color-phoenix-green: #10b981;
+
+  /* Om Phoenix Dark Base */
+  --color-phoenix-dark: #071f38;
+  --color-phoenix-navy: #0a2540;
 }
 
 @layer base {
@@ -56,19 +72,34 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-7 py-3 border border-transparent text-base font-semibold rounded-full text-white bg-primary-600 hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg duration-300;
+    @apply inline-flex items-center justify-center px-7 py-3 border border-transparent text-base font-bold rounded-full text-white bg-primary-600 hover:bg-primary-700 transition-all shadow-md hover:shadow-lg hover:shadow-primary-600/25 duration-300;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-7 py-3 border-none text-base font-bold rounded-lg text-white bg-secondary-500 hover:bg-secondary-600 transition-colors shadow-sm duration-300;
+    @apply inline-flex items-center justify-center px-7 py-3 border-none text-base font-bold rounded-full text-white bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-400 hover:to-secondary-500 transition-all shadow-md hover:shadow-lg hover:shadow-secondary-500/25 duration-300;
+  }
+  .btn-flame {
+    @apply inline-flex items-center justify-center px-7 py-3.5 border-none text-base font-extrabold rounded-full text-white bg-gradient-to-r from-[#ffb800] via-[#ff5e00] to-[#e11d48] hover:from-[#f59e0b] hover:via-[#ea580c] hover:to-[#dc2626] transition-all shadow-lg hover:shadow-xl hover:shadow-orange-500/30 hover:scale-[1.02] duration-300;
+  }
+  .btn-phoenix {
+    @apply inline-flex items-center justify-center px-7 py-3.5 border border-white/20 text-base font-bold rounded-full text-white bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 transition-all shadow-md hover:shadow-lg hover:shadow-primary-600/30 hover:scale-[1.02] duration-300;
+  }
+  .phoenix-badge {
+    @apply inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-primary-50 text-primary-700 text-xs sm:text-sm font-bold tracking-wider uppercase border border-primary-200/80;
+  }
+  .flame-badge {
+    @apply inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-secondary-50 text-secondary-700 text-xs sm:text-sm font-bold tracking-wider uppercase border border-secondary-200;
+  }
+  .phoenix-gradient-bar {
+    @apply h-1.5 w-24 bg-gradient-to-r from-primary-500 via-secondary-500 to-[#e11d48] rounded-full;
   }
   .card {
-    @apply bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_35px_-10px_rgba(0,103,171,0.14)] hover:-translate-y-1.5 hover:border-primary-200 transition-all duration-300 overflow-hidden border border-slate-100;
+    @apply bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,103,171,0.18)] hover:-translate-y-1.5 hover:border-primary-300 transition-all duration-300 ease-out overflow-hidden border border-slate-100;
   }
   .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary-500/10 hover:border-primary-200;
+    @apply transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary-500/15 hover:border-primary-300;
   }
   .card-lift {
-    @apply transition-transform duration-300 ease-out hover:-translate-y-1.5;
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-500/20;
   }
 }
 
@@ -111,3 +142,30 @@
 .animate-hero-fade {
   animation: heroFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(22, 139, 209, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 94, 0, 0.35);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+

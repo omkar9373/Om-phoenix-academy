@@ -58,19 +58,19 @@ const Admission = () => {
 
   return (
     <div 
-      className="py-16 sm:py-20 min-h-screen relative bg-cover bg-center bg-no-repeat bg-slate-50"
+      className="py-4 sm:py-6 relative bg-cover bg-center bg-no-repeat bg-slate-50"
       style={{
         backgroundImage: `url(${admissionBg})`,
         backgroundAttachment: 'local',
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionTitle 
           title="Admission Inquiry" 
           subtitle="Begin your journey towards academic excellence. Admissions open for academic session 2026-27." 
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mt-6">
           {/* Main Admission Form */}
           <div className="lg:col-span-7">
             <div className="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/80 shadow-2xl hover:shadow-primary-500/10 transition-all duration-300">
@@ -128,7 +128,7 @@ const Admission = () => {
                     </button>
                     <a
                       href="tel:+919860651233"
-                      className="btn-primary py-2.5 px-6 text-sm"
+                      className="btn-flame py-2.5 px-6 text-sm"
                     >
                       Speak with Counselor (+91 98606 51233)
                     </a>
@@ -311,7 +311,7 @@ const Admission = () => {
                   <div className="pt-2">
                     <button 
                       type="submit" 
-                      className="w-full btn-primary py-3.5 text-base font-bold shadow-md hover:shadow-xl hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2"
+                      className="w-full btn-flame py-3.5 text-base font-extrabold shadow-lg hover:shadow-xl hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2"
                     >
                       <span>Submit Application via WhatsApp</span>
                       <ArrowRight className="w-4 h-4" />
@@ -333,7 +333,7 @@ const Admission = () => {
           {/* Sidebar / Info & Benefits Cards */}
           <div className="lg:col-span-5 space-y-6">
             {/* Why Join Om Phoenix Card */}
-            <div className="bg-white/90 backdrop-blur-md rounded-3xl p-7 border border-white/80 shadow-2xl hover:shadow-primary-500/10 transition-all duration-300">
+            <div className="bg-white/90 backdrop-blur-md rounded-3xl p-7 border border-slate-200/80 shadow-lg hover:shadow-2xl hover:shadow-primary-500/15 hover:border-primary-300 hover:-translate-y-1.5 transition-all duration-300 ease-out">
               <span className="text-xs font-bold uppercase tracking-wider text-primary-600 bg-primary-50 px-3 py-1 rounded-full border border-primary-100 inline-block mb-3">
                 Academy Benefits
               </span>
@@ -384,7 +384,7 @@ const Admission = () => {
             </div>
 
             {/* Helpline & Quick Contact Card */}
-            <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-3xl p-7 text-white shadow-xl shadow-primary-700/15 border border-primary-500/30">
+            <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-3xl p-7 text-white shadow-xl shadow-primary-700/15 border border-primary-500/30 hover:shadow-2xl hover:shadow-primary-600/30 hover:-translate-y-1.5 transition-all duration-300 ease-out">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
                   <Headphones className="w-5 h-5 text-white" />

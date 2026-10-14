@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const SectionTitle = ({ title, subtitle, centered = true }) => {
   return (
-    <div className={`mb-12 ${centered ? 'text-center' : 'text-left'}`}>
+    <div className={`mb-6 sm:mb-8 ${centered ? 'text-center' : 'text-left'}`}>
       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
         {title}
       </h2>
@@ -11,7 +11,7 @@ const SectionTitle = ({ title, subtitle, centered = true }) => {
           {subtitle}
         </p>
       )}
-      <div className={`h-1 w-20 bg-primary-600 mt-6 rounded-full ${centered ? 'mx-auto' : ''}`}></div>
+      <div className={`h-1.5 w-24 bg-gradient-to-r from-primary-500 via-secondary-500 to-[#e11d48] mt-6 rounded-full shadow-xs ${centered ? 'mx-auto' : ''}`}></div>
     </div>
   );
 };
