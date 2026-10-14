@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SectionTitle from '../components/SectionTitle';
 import {
   Users,
   GraduationCap,
@@ -8,6 +9,10 @@ import {
   ClipboardCheck,
   UserRoundCheck,
   MessageCircleQuestion,
+  MapPin,
+  Phone,
+  Navigation,
+  ExternalLink,
   TrendingUp,
   ArrowRight,
   CheckCircle2,
@@ -26,10 +31,10 @@ import aniketResultImg from '../assets/aniket.jpeg';
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const stats = [
-  { value: '10+',   label: 'Experienced Faculty',    icon: Users },
-  { value: '500+',  label: 'Students Guided',         icon: GraduationCap },
-  { value: '95%+',  label: 'Academic Focus',          icon: BookOpen },
-  { value: '100%',  label: 'Commitment to Students',  icon: Target },
+  { value: '10+', label: 'Experienced Faculty', icon: Users },
+  { value: '500+', label: 'Students Guided', icon: GraduationCap },
+  { value: '95%+', label: 'Academic Focus', icon: BookOpen },
+  { value: '100%', label: 'Commitment to Students', icon: Target },
 ];
 
 const whyCards = [
@@ -67,23 +72,23 @@ const whyCards = [
 
 const steps = [
   { num: '01', title: 'Understand', desc: 'Build strong conceptual foundations.' },
-  { num: '02', title: 'Practice',   desc: 'Solve examples and practice questions.' },
-  { num: '03', title: 'Assess',     desc: 'Regular tests to measure progress.' },
-  { num: '04', title: 'Improve',    desc: 'Identify mistakes and strengthen weak areas.' },
-  { num: '05', title: 'Achieve',    desc: 'Work confidently towards academic goals.' },
+  { num: '02', title: 'Practice', desc: 'Solve examples and practice questions.' },
+  { num: '03', title: 'Assess', desc: 'Regular tests to measure progress.' },
+  { num: '04', title: 'Improve', desc: 'Identify mistakes and strengthen weak areas.' },
+  { num: '05', title: 'Achieve', desc: 'Work confidently towards academic goals.' },
 ];
 
 const commitments = [
-  { icon: Award,   title: 'Academic Excellence',         desc: 'Dedicated to helping every student reach their academic best.' },
-  { icon: Heart,   title: 'Personal Attention',          desc: 'One-on-one guidance tailored to each student\'s needs.' },
-  { icon: TrendingUp, title: 'Continuous Improvement',   desc: 'Regular feedback and progress tracking to keep students on track.' },
+  { icon: Award, title: 'Academic Excellence', desc: 'Dedicated to helping every student reach their academic best.' },
+  { icon: Heart, title: 'Personal Attention', desc: 'One-on-one guidance tailored to each student\'s needs.' },
+  { icon: TrendingUp, title: 'Continuous Improvement', desc: 'Regular feedback and progress tracking to keep students on track.' },
   { icon: Compass, title: 'Positive Learning Environment', desc: 'A safe, inclusive atmosphere that encourages curiosity and growth.' },
 ];
 
 const achievementImgs = [
-  { src: vedikaResultImg,   alt: 'Vedika Bansode – Student Achievement' },
+  { src: vedikaResultImg, alt: 'Vedika Bansode – Student Achievement' },
   { src: harshadaResultImg, alt: 'Harshada Navale – Student Achievement' },
-  { src: aniketResultImg,   alt: 'Aniket Kundgir – Student Achievement' },
+  { src: aniketResultImg, alt: 'Aniket Kundgir – Student Achievement' },
 ];
 
 const announcements = [
@@ -488,79 +493,116 @@ const About = () => (
     {/* ==================================================
         10. OUR COMMITMENT (Dark Navy)
     ================================================== */}
-    <section className="py-6 sm:py-8 bg-[#0A1F35]">
+   
+
+    <section className="py-0 bg-white border-t border-gray-100">
       <div className="w-full px-4 sm:px-6 lg:px-8">
+        <SectionTitle
+          title="Visit Our Moshi Branch"
+          subtitle="We are here to help you build a brighter future. Visit us at our Moshi Branch."
+        />
 
-        <div className="text-center max-w-3xl mx-auto mb-6">
-          <span className="inline-block py-1 px-3.5 rounded-full bg-white/10 text-[#F59E0B] text-xs font-bold tracking-widest uppercase mb-2 border border-white/15">
-            Our Promise
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-3">
-            Our Commitment to Every Student
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-[#e11d48] mx-auto rounded-full mb-3" />
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Every student has unique potential. At Om Phoenix Learning Academy, we strive to create an environment where students feel supported, motivated and confident to work towards their goals.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-4 items-stretch">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {commitments.map(({ icon: Icon, title, desc }, i) => (
+          {/* Branch Info Card */}
+          <div className="lg:col-span-2 flex flex-col">
             <div
-              key={i}
-              className="bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group text-center"
+              className="flex-1 rounded-2xl overflow-hidden shadow-[0_8px_32px_-4px_rgba(0,130,214,0.18)] border border-primary-100"
+              style={{
+                background: 'linear-gradient(160deg, #004875 0%, #0082d6 60%, #36c5ff 100%)',
+              }}
             >
-              <div className="w-12 h-12 mx-auto rounded-xl bg-[#168BD1]/20 text-[#168BD1] flex items-center justify-center mb-3 group-hover:bg-[#168BD1] group-hover:text-white transition-all duration-300">
-                <Icon className="w-6 h-6" />
+              {/* Card header */}
+              <div className="px-7 pt-8 pb-5 border-b border-white/10">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-white/15 p-2.5 rounded-full">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white/70 text-xs font-semibold uppercase tracking-widest">Branch</p>
+                    <h3 className="text-white text-lg font-extrabold leading-tight">OM PHOENIX ACADEMY</h3>
+                    <p className="text-blue-200 text-sm font-semibold">Moshi Branch</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-white mb-1.5">{title}</h3>
-              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">{desc}</p>
+
+              {/* Card body */}
+              <div className="px-7 py-6 space-y-5">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-blue-200 mt-0.5 shrink-0" />
+                  <p className="text-blue-100 text-sm leading-relaxed">
+                    Shakuntal Commercia Building, Office No. 233, 2nd Floor,
+                    Near City Pride School, Dehu-Moshi Road, Jadhavwadi, Moshi, Maharashtra.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Phone className="w-5 h-5 text-blue-200 mt-0.5 shrink-0" />
+                  <div className="space-y-1.5">
+                    {['8329063312', '9860641233', '9860651233'].map((num) => (
+                      <a
+                        key={num}
+                        href={`tel:${num}`}
+                        className="block text-white font-semibold text-sm hover:text-blue-200 transition-colors"
+                      >
+                        {num.replace(/(\d{5})(\d{5})/, '$1 $2')}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Directions button */}
+              <div className="px-7 pb-8">
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Shakuntal+Commercia+Building+Office+No+233+Near+City+Pride+School+Dehu+Moshi+Road+Jadhavwadi+Moshi+Maharashtra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-3 px-5 rounded-xl bg-white text-primary-700 font-bold text-sm hover:bg-primary-50 transition-colors shadow-md hover:shadow-lg"
+                  aria-label="Get Directions to Om Phoenix Academy Moshi Branch"
+                >
+                  <Navigation className="w-4 h-4" />
+                  Get Directions
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                </a>
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Google Map Embed */}
+          <div className="lg:col-span-3">
+            <div className="relative w-full h-full min-h-[380px] rounded-2xl overflow-hidden shadow-[0_8px_32px_-4px_rgba(0,0,0,0.12)] border border-gray-100">
+              <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-full shadow-md text-xs font-bold text-primary-700 border border-primary-100">
+                <MapPin className="w-3.5 h-3.5 text-primary-600" />
+                Om Phoenix Academy – Moshi Branch
+              </div>
+              <iframe
+                title="Om Phoenix Academy Moshi Branch Map"
+                src="https://maps.google.com/maps?q=Shakuntal+Commercia+Building+Near+City+Pride+School+Dehu+Moshi+Road+Jadhavwadi+Moshi+Maharashtra&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                className="absolute inset-0 w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                aria-label="Google Map showing Om Phoenix Academy Moshi Branch location"
+              />
+            </div>
+          </div>
+
         </div>
 
-      </div>
-    </section>
-
-
-    {/* ==================================================
-        11. CALL TO ACTION
-    ================================================== */}
-    <section className="py-8 sm:py-10 bg-gradient-to-br from-[#168BD1] to-[#0A1F35] relative overflow-hidden">
-      <div className="absolute -top-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#F59E0B]/10 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <span className="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-white/15 text-white text-xs font-bold tracking-widest uppercase mb-4 border border-white/20">
-          <Sparkles className="w-4 h-4 text-[#F59E0B]" />
-          Admissions Open
-        </span>
-
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-3 leading-tight">
-          Ready to Begin Your Learning Journey?
-        </h2>
-
-        <p className="text-sm sm:text-lg text-slate-200 max-w-2xl mx-auto mb-6 leading-relaxed">
-          Discover the right learning program and take the next step towards your academic goals.
+        <p className="mt-5 text-center text-sm text-gray-400">
+          Having trouble viewing the map?{' '}
+          <a
+            href="https://www.google.com/maps/search/Shakuntal+Commercia+Building+Near+City+Pride+School+Dehu+Moshi+Road+Jadhavwadi+Moshi+Maharashtra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-600 font-semibold hover:underline"
+          >
+            Open in Google Maps ↗
+          </a>
         </p>
-
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <Link
-            to="/courses"
-            className="btn-flame inline-flex items-center justify-center px-8 py-3 text-white font-bold text-base rounded-full transition-all duration-300 shadow-xl hover:scale-105 group"
-          >
-            Explore Courses
-            <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" />
-          </Link>
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 bg-white hover:bg-slate-100 text-[#0A1F35] font-bold text-base rounded-full transition-all duration-300 shadow-xl hover:scale-105"
-          >
-            Contact Us
-          </Link>
-        </div>
       </div>
     </section>
+
 
   </div>
 );

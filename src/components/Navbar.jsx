@@ -30,7 +30,7 @@ const Navbar = () => {
   const feeDropdownItems = [
 
     { name: 'Explore Scholarships', path: '/scholarships/explorescholarships' },
-    { name: 'Apply for Matrix Olympiad', path: '/scholarships/matrix-olympiad' },
+    { name: 'Apply for Om Phoenix  Olympiad', path: '/scholarships/matrix-olympiad' },
     { name: 'M-SAT (Admission Test)', path: '/scholarships/m-sat' },
 
   ];
@@ -46,7 +46,7 @@ const Navbar = () => {
     },
     { name: 'NEET', path: '/results/neet' },
     { name: 'Olympiads', path: '/results/olympiads' },
-    { name: 'NEET Answer Key', path: '/results/neet-answer-key' },
+    // { name: 'NEET Answer Key', path: '/results/neet-answer-key' },
   ];
 
   const links = [

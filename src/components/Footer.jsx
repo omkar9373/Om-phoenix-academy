@@ -79,7 +79,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="h-4.5 w-4.5 text-[#00a8ff] shrink-0" />
-                <a href="mailto:info@omphoenix.edu" className="text-xs sm:text-sm hover:text-white transition-colors">info@omphoenix.edu</a>
+                <a href="mailto:omphoenixacademymoshi2026@gmail.com" className="text-xs sm:text-sm hover:text-white transition-colors">omphoenixacademymoshi2026@gmail.com</a>
               </li>
             </ul>
           </div>

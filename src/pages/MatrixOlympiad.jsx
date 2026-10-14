@@ -138,7 +138,7 @@ const MatrixOlympiad = () => {
     <div className="py-4 sm:py-6 bg-gray-50">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Matrix Olympiad 2026-27"
+          title="Om Phoenix Olympiad 2026-27"
           subtitle="National Talent Recognition & Scholarship Examination by Om Phoenix Academy for Classes 5th to 12th."
         />
 

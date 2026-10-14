@@ -12,7 +12,7 @@ const BRANCH = {
     { display: '98606 41233', tel: '9860641233' },
     { display: '98606 51233', tel: '9860651233' },
   ],
-  email: 'info@omphoenix.edu',
+  email: 'omphoenixacademymoshi2026@gmail.com',
   // Directions URL for the exact address
   directionsUrl:
     'https://www.google.com/maps/dir/?api=1&destination=Shakuntal+Commercia+Building+Office+No+233+Near+City+Pride+School+Dehu+Moshi+Road+Jadhavwadi+Moshi+Maharashtra',
@@ -112,10 +112,10 @@ const Contact = () => {
               <div>
                 <h3 className="font-bold text-lg mb-1 text-gray-900 group-hover:text-primary-600 transition-colors">Email Address</h3>
                 <a
-                  href="mailto:info@omphoenix.edu"
+                  href={`mailto:${BRANCH.email}`}
                   className="text-gray-600 hover:text-primary-600 transition-colors text-sm font-medium"
                 >
-                  info@omphoenix.edu
+                  omphoenixacademymoshi2026@gmail.com
                 </a>
               </div>
             </div>
