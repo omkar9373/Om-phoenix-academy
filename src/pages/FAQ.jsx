@@ -19,7 +19,7 @@ const extendedFaqs = [
   {
     id: 6,
     category: 'admissions',
-    question: 'What is the M-SAT (Matrix Scholarship & Admission Test)?',
+    question: 'What is the M-SAT (Om Phoenix Scholarship & Admission Test)?',
     answer: 'M-SAT is our national-level scholarship and diagnostic examination. It tests analytical and problem-solving aptitude, allowing students to earn up to a 100% scholarship on tuition fees while benchmarking their competitive readiness.'
   },
   {

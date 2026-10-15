@@ -47,7 +47,7 @@ const MSat = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="M-SAT (Admission Test)"
-          subtitle="Matrix Scholarship and Admission Test — evaluate aptitude and secure merit-based fee concessions."
+          subtitle="Om Phoenix Scholarship and Admission Test — evaluate aptitude and secure merit-based fee concessions."
         />
 
         {/* Hero Card */}

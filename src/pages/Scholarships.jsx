@@ -8,7 +8,7 @@ const Scholarships = () => {
       icon: Award,
       title: 'M-SAT Merit Scholarship',
       percentage: 'Up to 100%',
-      desc: 'Awarded to top performers in our nationwide Matrix Scholarship and Admission Test (M-SAT).',
+      desc: 'Awarded to top performers in our nationwide Om Phoenix Scholarship and Admission Test (M-SAT).',
       criteria: 'Based on M-SAT percentile & rank',
     },
     {
@@ -53,14 +53,14 @@ const Scholarships = () => {
               Unlock Your Scholarship with M-SAT
             </h3>
             <p className="text-primary-100 text-sm sm:text-base mb-6 leading-relaxed max-w-3xl">
-              Take the Matrix Scholarship and Admission Test to assess your analytical abilities and secure up to a 100% waiver on tuition fees.
+              Take the Om Phoenix Scholarship and Admission Test to assess your analytical abilities and secure up to a 100% waiver on tuition fees.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/scholarships/m-sat" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#ffb800] via-[#ff5e00] to-[#e11d48] hover:from-[#f59e0b] hover:via-[#ea580c] hover:to-[#dc2626] text-white font-extrabold text-sm rounded-full shadow-lg hover:shadow-xl hover:shadow-orange-500/30 transition-all hover:scale-105">
                 Apply for M-SAT Now
               </Link>
-              <Link to="/scholarships/matrix-olympiad" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold text-sm px-6 py-3 rounded-full transition-all backdrop-blur-xs">
-                Matrix Olympiad
+              <Link to="/scholarships/om-phoenix-olympiad" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold text-sm px-6 py-3 rounded-full transition-all backdrop-blur-xs">
+                Om Phoenix Olympiad
               </Link>
             </div>
           </div>

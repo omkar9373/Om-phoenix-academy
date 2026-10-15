@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 
-const MatrixOlympiad = () => {
+const OmphoenixOlympiad = () => {
   const rewardTiers = [
     {
       rank: 'AIR 1 - 3',
@@ -172,7 +172,7 @@ const MatrixOlympiad = () => {
               </h2>
 
               <p className="text-slate-200 text-sm sm:text-base leading-relaxed max-w-3xl">
-                The Matrix Olympiad is Om Phoenix Academy’s prestigious annual academic talent recognition initiative. It evaluates students on conceptual clarity, problem-solving speed, and analytical reasoning across Science, Mathematics, and Mental Ability.
+                The Om Phoenix Olympiad is Om Phoenix Academy’s prestigious annual academic talent recognition initiative. It evaluates students on conceptual clarity, problem-solving speed, and analytical reasoning across Science, Mathematics, and Mental Ability.
               </p>
 
               {/* Action Buttons */}
@@ -229,7 +229,7 @@ const MatrixOlympiad = () => {
             </span>
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900">Exam Format &amp; Guidelines</h3>
-              <p className="text-xs text-gray-500">Key specifications for Matrix Olympiad 2026-27 test day</p>
+              <p className="text-xs text-gray-500">Key specifications for Om Phoenix Olympiad 2026-27 test day</p>
             </div>
           </div>
 
@@ -304,7 +304,7 @@ const MatrixOlympiad = () => {
         </div>
 
         {/* =========================================================
-            WHY APPEAR FOR MATRIX OLYMPIAD (Benefits 2x2 Grid)
+            WHY APPEAR FOR OM PHOENIX OLYMPIAD (Benefits 2x2 Grid)
         ========================================================== */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
@@ -313,7 +313,7 @@ const MatrixOlympiad = () => {
             </span>
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900">Why Students Must Appear</h3>
-              <p className="text-xs text-gray-500">Proven advantages of benchmarking in Matrix Olympiad 2026-27</p>
+              <p className="text-xs text-gray-500">Proven advantages of benchmarking in Om Phoenix Olympiad 2026-27</p>
             </div>
           </div>
 
@@ -395,7 +395,7 @@ const MatrixOlympiad = () => {
               Registration Help &amp; Counseling
             </span>
             <h3 className="text-xl sm:text-2xl font-black text-primary-950 mb-1">
-              Need Assistance with Matrix Olympiad Registration?
+              Need Assistance with Om Phoenix Olympiad Registration?
             </h3>
             <p className="text-xs sm:text-sm text-gray-600 max-w-2xl leading-relaxed">
               Connect with our academic counselors in Moshi, Pune. We will assist you with syllabus details, test dates, and sample question papers.
@@ -423,5 +423,5 @@ const MatrixOlympiad = () => {
   );
 };
 
-export default MatrixOlympiad;
+export default OmphoenixOlympiad;
 

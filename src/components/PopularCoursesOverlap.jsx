@@ -56,7 +56,7 @@ const popularCourses = [
     id: 'olympiad',
     title: 'Olympiad',
     subtitle: 'Early Excellence',
-    to: '/matrix-olympiad',
+    to: '/scholarships/om-phoenix-olympiad',
     bgClass: 'bg-[#ffedd5] hover:bg-[#fed7aa] border-[#fed7aa]',
     iconBgClass: 'bg-[#fed7aa] text-[#ea580c]',
     textColor: 'text-[#7c2d12]',

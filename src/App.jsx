@@ -13,7 +13,7 @@ import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import FeeStructure from './pages/FeeStructure';
 import Scholarships from './pages/Scholarships';
-import MatrixOlympiad from './pages/MatrixOlympiad';
+import OmphoenixOlympiad from './pages/OmphoenixOlympiad';
 import MSat from './pages/MSat';
 import JeeAdvanced from './pages/results/JeeAdvanced';
 import JeeMain from './pages/results/JeeMain';
@@ -36,7 +36,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/fee-structure" element={<FeeStructure />} />
             <Route path="/scholarships/explorescholarships" element={<Scholarships />} />
-            <Route path="/scholarships/matrix-olympiad" element={<MatrixOlympiad />} />
+            <Route path="/scholarships/om-phoenix-olympiad" element={<OmphoenixOlympiad />} />
+            <Route path="/scholarships/Omphoenix-olympiad" element={<Navigate to="/scholarships/om-phoenix-olympiad" replace />} />
+            <Route path="/Omphoenix-olympiad" element={<Navigate to="/scholarships/om-phoenix-olympiad" replace />} />
+            <Route path="/om-phoenix-olympiad" element={<Navigate to="/scholarships/om-phoenix-olympiad" replace />} />
             <Route path="/scholarships/m-sat" element={<MSat />} />
             <Route path="/pay-m-sat-fee" element={<Navigate to="/scholarships/m-sat" replace />} />
             <Route path="/fee" element={<Navigate to="/fee-structure" replace />} />

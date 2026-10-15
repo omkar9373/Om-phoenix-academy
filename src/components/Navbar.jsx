@@ -30,7 +30,7 @@ const Navbar = () => {
   const feeDropdownItems = [
 
     { name: 'Explore Scholarships', path: '/scholarships/explorescholarships' },
-    { name: 'Apply for Om Phoenix  Olympiad', path: '/scholarships/matrix-olympiad' },
+    { name: 'Apply for Om Phoenix Olympiad', path: '/scholarships/om-phoenix-olympiad' },
     { name: 'M-SAT (Admission Test)', path: '/scholarships/m-sat' },
 
   ];
