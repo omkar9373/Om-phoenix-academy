@@ -20,6 +20,9 @@ import JeeMain from './pages/results/JeeMain';
 import Neet from './pages/results/Neet';
 import Olympiads from './pages/results/Olympiads';
 import NeetAnswerKey from './pages/results/NeetAnswerKey';
+import Class5to10 from './pages/results/Class5to10';
+import Class11to12 from './pages/results/Class11to12';
+import MhtCet from './pages/results/MhtCet';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -46,6 +49,10 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/results" element={<Navigate to="/results/class-11th-12th" replace />} />
+            <Route path="/results/class-5th-10th" element={<Class5to10 />} />
+            <Route path="/results/class-11th-12th" element={<Class11to12 />} />
+            <Route path="/results/mht-cet" element={<MhtCet />} />
             <Route path="/results/jee-advanced" element={<JeeAdvanced />} />
             <Route path="/results/jee-main" element={<JeeMain />} />
             <Route path="/results/neet" element={<Neet />} />

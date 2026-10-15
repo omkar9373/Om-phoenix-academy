@@ -36,17 +36,18 @@ const Navbar = () => {
   ];
 
   const resultsItems = [
+    { name: 'Class 5th to 10th Results', path: '/results/class-5th-10th' },
+    { name: 'Class 11th & 12th Science', path: '/results/class-11th-12th' },
     {
-      name: 'JEE',
+      name: 'Entrance Exam Results',
       hasSubmenu: true,
       submenu: [
-        { name: 'JEE Advanced', path: '/results/jee-advanced' },
-        { name: 'JEE Main', path: '/results/jee-main' },
+        { name: 'MHT-CET Results', path: '/results/mht-cet' },
+        { name: 'NEET Results', path: '/results/neet' },
+        { name: 'JEE Main & Adv', path: '/results/jee-main' },
       ],
     },
-    { name: 'NEET', path: '/results/neet' },
     { name: 'Olympiads', path: '/results/olympiads' },
-    // { name: 'NEET Answer Key', path: '/results/neet-answer-key' },
   ];
 
   const links = [
