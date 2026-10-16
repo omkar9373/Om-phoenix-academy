@@ -23,7 +23,6 @@ import SectionTitle from '../components/SectionTitle';
 import { 
   facilitiesList, 
   featuredFacilities, 
-  galleryImages, 
   facilityMatters 
 } from '../data/facilities';
 
@@ -52,14 +51,14 @@ const Facilities = () => {
           1. FACILITIES HERO SECTION
       ====================================================== */}
       <section 
-        className="relative py-8 sm:py-12 flex items-center overflow-hidden bg-cover bg-center"
+        className="relative py-12 sm:py-16 lg:py-20 flex items-center overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage: "url('/images/facilities/facilities-hero.png')"
         }}
       >
-        {/* Dark Navy Overlays */}
-        <div className="absolute inset-0 bg-[#0A1F35]/80"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F35]/95 via-[#0A1F35]/85 to-transparent"></div>
+        {/* Refined Gradient Overlay: clear visibility for background while ensuring high contrast for text */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F35]/95 via-[#0A1F35]/70 to-[#0A1F35]/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F35]/60 via-transparent to-black/20"></div>
 
         <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10 py-4 sm:py-6">
           <div className="max-w-3xl">
@@ -103,91 +102,8 @@ const Facilities = () => {
         </div>
       </section>
 
-
       {/* =====================================================
-          2. INTRODUCTION SECTION (Two Column)
-      ====================================================== */}
-      <section className="py-6 sm:py-8 bg-white">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
-            {/* LEFT: Academy / Classroom Image */}
-            <div className="lg:col-span-6">
-              <div className="relative group">
-                <div className="relative overflow-hidden rounded-3xl shadow-xl bg-slate-100 aspect-[4/3] border border-slate-100">
-                  <img
-                    src="/images/facilities/smart-classroom.jpg"
-                    alt="Om Phoenix Learning Academy Smart Classroom"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F35]/40 via-transparent to-transparent opacity-60 pointer-events-none"></div>
-                </div>
-
-                {/* Floating highlight card */}
-                <div className="absolute -bottom-4 -right-4 hidden sm:flex items-center gap-3.5 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 max-w-xs">
-                  <div className="w-10 h-10 rounded-xl bg-[#E8F5FC] text-[#168BD1] flex items-center justify-center flex-shrink-0">
-                    <Building2 className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-lg font-extrabold text-[#0A1F35] block">Smart Campus</span>
-                    <span className="text-xs text-slate-500 font-medium">Technology-driven coaching ecosystem</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* RIGHT: Content & Checklist */}
-            <div className="lg:col-span-6 flex flex-col justify-center space-y-4">
-              <div>
-                <span className="inline-block py-1.5 px-4 rounded-full bg-[#E8F5FC] text-[#168BD1] text-xs sm:text-sm font-bold tracking-wider uppercase mb-2 border border-[#168BD1]/20">
-                  OUR FACILITIES
-                </span>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A1F35] tracking-tight leading-tight">
-                  Everything Students Need to Learn, Grow & Succeed
-                </h2>
-              </div>
-
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Om Phoenix Learning Academy is committed to creating an environment where students can focus on learning, develop their skills and achieve their academic goals. Our facilities are designed with comfort, technology, safety and effective learning in mind.
-              </p>
-
-              {/* Checklist */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-                {[
-                  "Comfortable Learning Environment",
-                  "Modern Teaching Resources",
-                  "Student-Friendly Campus",
-                  "Safe & Secure Environment"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center space-x-2.5 text-slate-700 font-semibold text-xs sm:text-sm">
-                    <div className="w-5 h-5 rounded-full bg-[#E8F5FC] text-[#168BD1] flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3.5 h-3.5 stroke-[3]" />
-                    </div>
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Action Button */}
-              <div className="pt-2">
-                <a
-                  href="#featured-facilities"
-                  className="inline-flex items-center px-6 py-2.5 bg-[#0A1F35] hover:bg-[#168BD1] text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#168BD1]/25 group"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" />
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-
-      {/* =====================================================
-          3. FACILITIES GRID (12 Cards)
+          2. FACILITIES GRID (12 Cards)
       ====================================================== */}
       <section className="py-6 sm:py-8 bg-slate-50/70" id="facilities-grid">
         <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -403,56 +319,7 @@ const Facilities = () => {
       </section>
 
 
-      {/* =====================================================
-          5. FACILITY IMAGE GALLERY ("Explore Our Campus")
-      ====================================================== */}
-      <section className="py-6 sm:py-8 bg-slate-50/70" id="campus-gallery">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          
-          {/* Gallery Header */}
-          <div className="text-center max-w-3xl mx-auto mb-6">
-            <span className="inline-block py-1 px-3.5 rounded-full bg-[#E8F5FC] text-[#168BD1] text-xs sm:text-sm font-bold tracking-wider uppercase mb-2 border border-[#168BD1]/20">
-              Campus Tour
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A1F35] tracking-tight mb-3">
-              Explore Our Campus
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-[#e11d48] mx-auto rounded-full mb-3"></div>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              Take a glimpse at the learning environment and facilities at Om Phoenix Learning Academy.
-            </p>
-          </div>
 
-          {/* Modern Image Grid: Col-6 by 6 (2 equal columns) Full Width */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 w-full">
-            {galleryImages.map((item) => (
-              <div
-                key={item.id}
-                className="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200/80 bg-slate-100 h-[220px] sm:h-[260px] md:h-[300px] w-full"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  style={{ objectPosition: item.objectPosition || 'center center' }}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy"
-                />
-                
-                {/* Subtle Overlay with title & category */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F35]/90 via-[#0A1F35]/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300 flex flex-col justify-end p-4 sm:p-5">
-                  <span className="inline-block text-[11px] sm:text-xs font-bold tracking-wider uppercase text-[#F59E0B] mb-1">
-                    {item.category}
-                  </span>
-                  <h4 className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug">
-                    {item.title}
-                  </h4>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
 
 
       {/* =====================================================
