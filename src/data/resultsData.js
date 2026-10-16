@@ -10,12 +10,9 @@ export const academyStats = {
   topCetScore: '99.60%ile',
   topJeeScore: '99.55%ile',
   address: 'शाकुंतल कमर्शियल बिल्डिंग, दुसरा मजला, सिटी प्राइड स्कूल जवळ, देहू आळंदी रोड, मोशी, पुणे',
-  phones: ['89993 93976', '9860641233', '9860651233'],
+  phones: ['8999393976', '9860641233', '9860651233'],
 };
 
-// ==========================================
-// 1. CLASS 5th TO 10th (CBSE / STATE / FOUNDATION)
-// ==========================================
 export const class5to10Toppers = [
   {
     name: 'Naitik Mali',

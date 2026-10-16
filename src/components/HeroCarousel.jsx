@@ -289,19 +289,8 @@ const HeroCarousel = () => {
                     className="w-full h-full object-cover object-top filter brightness-105 contrast-[1.02] transition-transform duration-700 ease-out hover:scale-105"
                     loading="eager"
                   />
-                  {/* Subtle Bottom Shadow Gradient for Text Legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent pointer-events-none" />
-
-                  {/* Teacher Bottom Info Card */}
-                  <div className="absolute bottom-4 inset-x-4 p-3.5 rounded-2xl bg-slate-950/80 backdrop-blur-md border border-white/15 text-white">
-                    <p className="text-base sm:text-lg font-extrabold leading-tight tracking-tight text-white flex items-center justify-between">
-                      <span>{slide.teacher.name}</span>
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    </p>
-                    <p className="text-xs sm:text-sm text-yellow-300 font-semibold mt-0.5">
-                      {slide.teacher.role}
-                    </p>
-                  </div>
+                  {/* Subtle Bottom Shadow Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
                 </div>
 
               </div>

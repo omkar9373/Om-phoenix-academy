@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 
 import grandOpeningImg from '../assets/grand-opning.jpeg';
-import admissionBannerImg from '../assets/adsmition.jpeg';
+import foundersImg from '../assets/founders.jpg';
 import vedikaResultImg from '../assets/vedika.jpeg';
 import harshadaResultImg from '../assets/harshada.jpeg';
 import aniketResultImg from '../assets/aniket.jpeg';
@@ -91,20 +91,6 @@ const achievementImgs = [
   { src: aniketResultImg, alt: 'Aniket Kundgir – Student Achievement' },
 ];
 
-const announcements = [
-  {
-    img: grandOpeningImg,
-    title: 'Grand Opening',
-    desc: 'Celebrating the beginning of a new learning journey with Om Phoenix Learning Academy.',
-    alt: 'Grand Opening – Om Phoenix Learning Academy',
-  },
-  {
-    img: admissionBannerImg,
-    title: 'Admissions Open',
-    desc: 'Explore our academic programs and begin your learning journey with Om Phoenix.',
-    alt: 'Admissions Open – Om Phoenix Learning Academy',
-  },
-];
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
@@ -248,71 +234,133 @@ const About = () => (
 
 
     {/* ==================================================
-        4. OUR MISSION
+        4. VISIONARY FOUNDERS & LEADERSHIP
     ================================================== */}
-    <section className="py-6 sm:py-8 bg-[#E8F5FC]">
-      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl shadow-lg border border-[#168BD1]/15 p-6 sm:p-10 text-center">
-          <div className="w-14 h-14 mx-auto rounded-full bg-[#E8F5FC] text-[#168BD1] flex items-center justify-center mb-4 shadow-sm">
-            <Target className="w-7 h-7" />
-          </div>
-          <span className="inline-block py-1 px-3 rounded-full bg-[#E8F5FC] text-[#168BD1] text-xs font-bold tracking-widest uppercase mb-3 border border-[#168BD1]/20">
-            Our Mission
+    <section className="py-8 sm:py-12 bg-white" id="founders">
+      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+
+        {/* Section Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+          <span className="inline-block py-1 px-3.5 rounded-full bg-[#E8F5FC] text-[#168BD1] text-xs font-bold tracking-widest uppercase mb-2 border border-[#168BD1]/20">
+            Visionary Leadership
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A1F35] mb-3 tracking-tight">
-            Our Mission
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A1F35] tracking-tight mb-2">
+            Meet Our Founders
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            To provide accessible, high-quality and student-focused education that helps learners understand concepts deeply, develop confidence and prepare effectively for academic and competitive examinations.
+          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-[#e11d48] mx-auto rounded-full mb-3" />
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Guided by dedication and a passion for student excellence, our founders are committed to empowering students to achieve top ranks in IIT-JEE, NEET, MHT-CET, and Foundation boards.
           </p>
         </div>
-      </div>
-    </section>
 
+        {/* Founders Showcase Card */}
+        <div className="bg-gradient-to-br from-slate-50 via-white to-[#e8f5fc]/40 rounded-3xl border border-slate-200/90 shadow-[0_8px_30px_-6px_rgba(10,31,53,0.08)] overflow-hidden p-5 sm:p-8 lg:p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+            
+            {/* LEFT: Founders Photo Card */}
+            <div className="lg:col-span-6 flex flex-col items-center">
+              <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-slate-900 group">
+                <img
+                  src={foundersImg}
+                  alt="Founders Gangadhar Ghongade and Ravindr Gadade – Om Phoenix Learning Academy"
+                  className="w-full h-auto object-cover transform group-hover:scale-102 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+                
+                {/* Overlay Badge at Bottom */}
+                <div className="absolute bottom-0 inset-x-0 p-3.5 sm:p-4 bg-gradient-to-t from-[#0a1f35]/95 via-[#0a1f35]/80 to-transparent text-white">
+                  <p className="text-base sm:text-lg font-extrabold tracking-tight text-white flex items-center justify-between">
+                    <span>Gangadhar Ghongade & Ravindr Gadade</span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                  </p>
+                  <p className="text-xs sm:text-sm text-yellow-300 font-semibold mt-0.5">
+                    Founders & Directors, Om Phoenix Learning Academy
+                  </p>
+                </div>
+              </div>
 
-    {/* ==================================================
-        5. OUR VISION
-    ================================================== */}
-    <section className="py-6 sm:py-8 bg-white">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-
-          {/* LEFT – large icon illustration */}
-          <div className="flex items-center justify-center">
-            <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-[#E8F5FC] to-[#168BD1]/20 flex items-center justify-center shadow-lg border border-[#168BD1]/20">
-              <div className="w-28 h-28 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-[#168BD1] to-[#0A1F35] flex items-center justify-center shadow-inner">
-                <Compass className="w-14 h-14 sm:w-20 sm:h-20 text-white opacity-90" />
+              {/* Trust Badges under photo */}
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mt-3.5 w-full max-w-lg">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-2xs text-[11px] sm:text-xs font-bold text-[#0A1F35]">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                  Visionary Mentorship
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-2xs text-[11px] sm:text-xs font-bold text-[#0A1F35]">
+                  <Award className="w-3.5 h-3.5 text-[#168BD1]" />
+                  Result-Oriented Pedagogy
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-2xs text-[11px] sm:text-xs font-bold text-[#0A1F35]">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                  Student-First Values
+                </span>
               </div>
             </div>
-          </div>
 
-          {/* RIGHT – content */}
-          <div className="flex flex-col justify-center space-y-4">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-[#E8F5FC] text-[#168BD1] text-xs font-bold tracking-widest uppercase border border-[#168BD1]/20 w-fit">
-              Our Vision
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A1F35] tracking-tight leading-tight">
-              Our Vision
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              To become a trusted learning destination where students receive the right guidance, resources and encouragement to achieve academic excellence and build a successful future.
-            </p>
-            <div className="inline-flex items-center gap-2.5 py-2 px-5 rounded-2xl bg-[#E8F5FC] border border-[#168BD1]/20 text-[#0A1F35] font-bold text-base sm:text-lg tracking-wide w-fit">
-              <span className="text-[#168BD1]">Learn</span>
-              <span className="text-[#F59E0B]">•</span>
-              <span className="text-[#168BD1]">Develop</span>
-              <span className="text-[#F59E0B]">•</span>
-              <span className="text-[#168BD1]">Achieve</span>
+            {/* RIGHT: Founders' Message & Vision */}
+            <div className="lg:col-span-6 flex flex-col justify-center space-y-4">
+              <div>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#E8F5FC] text-[#168BD1] border border-[#168BD1]/20 mb-2">
+                  Directors' Message
+                </span>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0A1F35] tracking-tight leading-snug">
+                  "Education is not just about scoring marks, it's about igniting true potential."
+                </h3>
+              </div>
+
+              <div className="space-y-3 text-slate-600 text-xs sm:text-sm leading-relaxed">
+                <p>
+                  Under the visionary leadership of <strong className="text-[#0A1F35] font-bold">Mr. Gangadhar Ghongade</strong> and <strong className="text-[#0A1F35] font-bold">Mr. Ravindr Gadade</strong>, Om Phoenix Learning Academy was established with a singular mission: to bring Kota-standard academic coaching with individualized attention to Moshi, Pune.
+                </p>
+                <p>
+                  Having mentored hundreds of students through competitive exams like <strong className="text-slate-800">IIT-JEE, NEET-UG, and MHT-CET</strong>, our founders recognize that every student has unique learning needs. Their pedagogy combines disciplined concept mastery, daily practice problem sheets (DPPs), continuous performance analytics, and dedicated one-on-one doubt resolution.
+                </p>
+              </div>
+
+              {/* Leadership Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div className="p-3 rounded-xl bg-white border border-slate-200/80 shadow-2xs flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#E8F5FC] text-[#168BD1] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Target className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-[#0A1F35]">Kota-Pattern Pedagogy</h4>
+                    <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">Structured study material & test series</p>
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-xl bg-white border border-slate-200/80 shadow-2xs flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Users className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-[#0A1F35]">Personal Attention</h4>
+                    <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">Small batches & 1-on-1 mentor guidance</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA link */}
+              <div className="pt-1">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-xl bg-[#0A1F35] hover:bg-[#168BD1] text-white font-bold text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#168BD1]/25 group"
+                >
+                  <span>Connect With Our Leadership</span>
+                  <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
             </div>
-          </div>
 
+          </div>
         </div>
+
       </div>
     </section>
 
 
     {/* ==================================================
-        6. WHY CHOOSE OM PHOENIX
+        5. WHY CHOOSE OM PHOENIX
     ================================================== */}
     <section className="py-6 sm:py-8 bg-slate-50/70">
       <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -352,7 +400,7 @@ const About = () => (
 
 
     {/* ==================================================
-        7. OUR LEARNING APPROACH (Timeline/Steps)
+        6. OUR LEARNING APPROACH (Timeline/Steps)
     ================================================== */}
     <section className="py-6 sm:py-8 bg-white" id="learning-approach">
       <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -391,7 +439,7 @@ const About = () => (
 
 
     {/* ==================================================
-        8. STUDENT ACHIEVEMENTS
+        7. STUDENT ACHIEVEMENTS
     ================================================== */}
     <section className="py-6 sm:py-8 bg-slate-50/70">
       <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -437,61 +485,7 @@ const About = () => (
 
 
     {/* ==================================================
-        9. LATEST ANNOUNCEMENTS
-    ================================================== */}
-    <section className="py-4 sm:py-6 bg-white">
-      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-
-        <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-5">
-          <span className="inline-block py-1 px-3.5 rounded-full bg-[#E8F5FC] text-[#168BD1] text-xs font-bold tracking-widest uppercase mb-2 border border-[#168BD1]/20">
-            News & Updates
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A1F35] tracking-tight mb-2">
-            Latest Announcements
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-[#e11d48] mx-auto rounded-full mb-2" />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-4xl mx-auto items-stretch">
-          {announcements.map(({ img, title, desc, alt }, i) => (
-            <div
-              key={i}
-              className="group bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-md hover:border-[#168BD1]/40 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
-            >
-              <div className="overflow-hidden bg-slate-50 h-52 sm:h-60 md:h-64 w-full flex items-center justify-center p-2.5">
-                <img
-                  src={img}
-                  alt={alt}
-                  className="max-h-full max-w-full w-auto h-auto object-contain transform group-hover:scale-102 transition-transform duration-500 ease-out rounded-lg shadow-2xs"
-                  loading="lazy"
-                />
-              </div>
-
-              <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                <h3 className="text-lg sm:text-xl font-bold text-[#0A1F35] mb-1.5 group-hover:text-[#168BD1] transition-colors duration-200">
-                  {title}
-                </h3>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-3 flex-grow">{desc}</p>
-                <div className="mt-auto pt-2 border-t border-slate-100">
-                  <Link
-                    to="/admission"
-                    className="inline-flex items-center text-[#168BD1] font-bold text-xs sm:text-sm hover:text-[#0A1F35] transition-colors duration-200 group/btn"
-                  >
-                    <span>View Details</span>
-                    <ArrowRight className="ml-1.5 w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
-
-
-    {/* ==================================================
-        10. OUR COMMITMENT (Dark Navy)
+        8. VISIT OUR MOSHI BRANCH
     ================================================== */}
    
 
