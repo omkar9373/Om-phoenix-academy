@@ -10,19 +10,13 @@ const Footer = () => {
           
           {/* Brand & About */}
           <div className="space-y-3">
-            <Link to="/" className="flex items-center gap-3">
-              <img 
-                src={logo} 
-                alt="Om Phoenix Learning Academy" 
-                className="h-10 w-auto object-contain bg-white/10 p-1 rounded-xl backdrop-blur-xs" 
-              />
-              <div className="flex flex-col leading-none">
-                <span className="font-extrabold text-base sm:text-lg text-white tracking-tight">
-                  OM PHOENIX
-                </span>
-                <span className="text-[10px] sm:text-[11px] font-semibold text-primary-400 tracking-wider uppercase mt-0.5">
-                  Learning Academy
-                </span>
+            <Link to="/" className="inline-block group" aria-label="Om Phoenix Learning Academy">
+              <div className="bg-white/95 group-hover:bg-white transition-all px-3 py-1.5 rounded-xl inline-flex items-center shadow-sm">
+                <img 
+                  src={logo} 
+                  alt="Om Phoenix Learning Academy" 
+                  className="h-10 sm:h-11 w-auto object-contain" 
+                />
               </div>
             </Link>
             <p className="text-xs sm:text-sm text-gray-400 mt-2 line-clamp-3">
@@ -75,7 +69,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4.5 w-4.5 text-[#ff8a00] shrink-0" />
-                <a href="tel:8378903312" className="text-xs sm:text-sm hover:text-white transition-colors">+91 83789 03312 / 98606 51233</a>
+                <a href="tel:8329063312" className="text-xs sm:text-sm hover:text-white transition-colors">+91 8329063312 / 9860651233</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="h-4.5 w-4.5 text-[#00a8ff] shrink-0" />

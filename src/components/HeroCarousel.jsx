@@ -80,9 +80,9 @@ const slides = [
   {
     id: 3,
     badge: 'OM PHOENIX LEARNING ACADEMY',
-    badgeAccent: 'M-SAT SCHOLARSHIP 2026-27',
+    badgeAccent: 'M-CET SCHOLARSHIP 2026-27',
     headingPrefix: 'Win Up to 100% Scholarship via',
-    headingHighlight: 'M-SAT Talent Exam',
+    headingHighlight: 'M-CET Talent Exam',
     headingSuffix: '',
     description:
       'Appear for the Phoenix Scholarship Aptitude Test. Build unbeatable foundations in Mathematics & Science for Olympiads, NTSE, Homi Bhabha & School Board Exams.',
@@ -92,8 +92,8 @@ const slides = [
       'Small Interactive Batches (Max 30) with Individual Mentorship',
     ],
     primaryCta: {
-      text: 'Register for M-SAT',
-      to: '/scholarships/m-sat',
+      text: 'Register for M-CET',
+      to: '/scholarships/m-cet',
     },
     secondaryCta: {
       text: 'Explore Scholarships',

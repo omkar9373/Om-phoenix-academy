@@ -175,7 +175,7 @@ const Admission = () => {
                       />
                     </div>
                     <span className="text-[11px] text-slate-400 mt-1 block">
-                      We will share the batch details and M-SAT test pass on this number.
+                      We will share the batch details and M-CET test pass on this number.
                     </span>
                   </div>
 
@@ -273,8 +273,8 @@ const Admission = () => {
                         <option value="Foundation & Olympiad (Class 5th - 10th)">
                           Foundation &amp; Olympiad Program (5th - 10th Std)
                         </option>
-                        <option value="M-SAT Scholarship & Admission Test">
-                          M-SAT Scholarship &amp; Admission Test
+                        <option value="M-CET Scholarship & Admission Test">
+                          M-CET Scholarship &amp; Admission Test
                         </option>
                       </select>
                     </div>
@@ -347,7 +347,7 @@ const Admission = () => {
                   </div>
                   <div>
                     <span className="font-semibold text-slate-900 block">Up to 100% Scholarship</span>
-                    Fee concessions based on M-SAT performance and board examination merit.
+                    Fee concessions based on M-CET performance and board examination merit.
                   </div>
                 </li>
 

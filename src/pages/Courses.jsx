@@ -96,7 +96,7 @@ const Courses = () => {
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-xs border border-white/10">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-              Up to 100% M-SAT Scholarships
+              Up to 100% M-CET Scholarships
             </span>
           </div>
         </div>

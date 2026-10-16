@@ -6,10 +6,10 @@ const Scholarships = () => {
   const scholarshipsList = [
     {
       icon: Award,
-      title: 'M-SAT Merit Scholarship',
+      title: 'M-CET Merit Scholarship',
       percentage: 'Up to 100%',
-      desc: 'Awarded to top performers in our nationwide Om Phoenix Scholarship and Admission Test (M-SAT).',
-      criteria: 'Based on M-SAT percentile & rank',
+      desc: 'Awarded to top performers in our nationwide Om Phoenix Common Entrance Test (M-CET).',
+      criteria: 'Based on M-CET percentile & rank',
     },
     {
       icon: GraduationCap,
@@ -50,14 +50,14 @@ const Scholarships = () => {
               Merit First
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold mt-3 mb-2 text-white">
-              Unlock Your Scholarship with M-SAT
+              Unlock Your Scholarship with M-CET
             </h3>
             <p className="text-primary-100 text-sm sm:text-base mb-6 leading-relaxed max-w-3xl">
-              Take the Om Phoenix Scholarship and Admission Test to assess your analytical abilities and secure up to a 100% waiver on tuition fees.
+              Take the Om Phoenix Common Entrance Test to assess your analytical abilities and secure up to a 100% waiver on tuition fees.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/scholarships/m-sat" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#ffb800] via-[#ff5e00] to-[#e11d48] hover:from-[#f59e0b] hover:via-[#ea580c] hover:to-[#dc2626] text-white font-extrabold text-sm rounded-full shadow-lg hover:shadow-xl hover:shadow-orange-500/30 transition-all hover:scale-105">
-                Apply for M-SAT Now
+              <Link to="/scholarships/m-cet" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#ffb800] via-[#ff5e00] to-[#e11d48] hover:from-[#f59e0b] hover:via-[#ea580c] hover:to-[#dc2626] text-white font-extrabold text-sm rounded-full shadow-lg hover:shadow-xl hover:shadow-orange-500/30 transition-all hover:scale-105">
+                Apply for M-CET Now
               </Link>
               <Link to="/scholarships/om-phoenix-olympiad" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold text-sm px-6 py-3 rounded-full transition-all backdrop-blur-xs">
                 Om Phoenix Olympiad
@@ -98,7 +98,7 @@ const Scholarships = () => {
         <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300 text-center">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">How to Claim Your Scholarship?</h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-xs sm:text-sm mb-5">
-            Register online for M-SAT or submit your academic credentials during campus admission to get your scholarship approved instantly.
+            Register online for M-CET or submit your academic credentials during campus admission to get your scholarship approved instantly.
           </p>
           <div className="flex justify-center gap-4">
             <Link to="/admission" className="btn-flame py-2.5 px-6 text-sm">

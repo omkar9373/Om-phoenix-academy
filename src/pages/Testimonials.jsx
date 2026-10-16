@@ -185,7 +185,7 @@ const Testimonials = () => {
                 Ready to Achieve Your Dream Rank?
               </h3>
               <p className="text-xs sm:text-sm text-slate-200">
-                Join our upcoming batches for JEE, NEET &amp; MHT-CET. Appear for M-SAT to unlock up to 100% scholarships.
+                Join our upcoming batches for JEE, NEET &amp; MHT-CET. Appear for M-CET to unlock up to 100% scholarships.
               </p>
             </div>
             <div className="flex gap-2.5 shrink-0">
@@ -197,10 +197,10 @@ const Testimonials = () => {
                 <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
               </Link>
               <Link
-                to="/scholarships/m-sat"
+                to="/scholarships/m-cet"
                 className="inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 transition-colors"
               >
-                <span>Register for M-SAT</span>
+                <span>Register for M-CET</span>
               </Link>
             </div>
           </div>

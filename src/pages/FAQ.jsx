@@ -19,8 +19,8 @@ const extendedFaqs = [
   {
     id: 6,
     category: 'admissions',
-    question: 'What is the M-SAT (Om Phoenix Scholarship & Admission Test)?',
-    answer: 'M-SAT is our national-level scholarship and diagnostic examination. It tests analytical and problem-solving aptitude, allowing students to earn up to a 100% scholarship on tuition fees while benchmarking their competitive readiness.'
+    question: 'What is the M-CET (Om Phoenix Common Entrance Test)?',
+    answer: 'M-CET is our national-level scholarship and diagnostic examination. It tests analytical and problem-solving aptitude, allowing students to earn up to a 100% scholarship on tuition fees while benchmarking their competitive readiness.'
   },
   {
     id: 7,
@@ -54,7 +54,7 @@ const FAQ = () => {
 
   const categories = [
     { id: 'all', label: 'All FAQs', icon: HelpCircle },
-    { id: 'admissions', label: 'Admissions & M-SAT', icon: GraduationCap },
+    { id: 'admissions', label: 'Admissions & M-CET', icon: GraduationCap },
     { id: 'courses', label: 'Courses & Academics', icon: BookOpen },
     { id: 'fees', label: 'Scholarships & Fees', icon: Award },
     { id: 'facilities', label: 'Campus & Facilities', icon: Building2 },
@@ -93,7 +93,7 @@ const FAQ = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-[#e11d48] mx-auto rounded-full mb-3" />
 
           <p className="text-sm sm:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed">
-            Find answers to common queries regarding admissions, batch timings, M-SAT scholarships, curriculum structure, and student life at Om Phoenix Academy.
+            Find answers to common queries regarding admissions, batch timings, M-CET scholarships, curriculum structure, and student life at Om Phoenix Academy.
           </p>
         </div>
       </section>

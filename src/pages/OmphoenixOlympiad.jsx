@@ -122,7 +122,7 @@ const OmphoenixOlympiad = () => {
       step: '02',
       title: 'Appear for Olympiad',
       desc: 'Take the test at our Moshi center or online with comprehensive question papers designed by experts.',
-      link: '/scholarships/m-sat',
+      link: '/scholarships/m-cet',
       btnText: 'Exam Guidelines',
     },
     {
@@ -184,10 +184,10 @@ const OmphoenixOlympiad = () => {
                   Apply for Olympiad Now
                 </Link>
                 <Link
-                  to="/scholarships/m-sat"
+                  to="/scholarships/m-cet"
                   className="inline-flex items-center px-6 py-3 sm:py-3.5 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold text-sm sm:text-base backdrop-blur-xs transition-all hover:scale-102"
                 >
-                  Explore M-SAT Exam <ArrowRight className="w-4 h-4 ml-2" />
+                  Explore M-CET Exam <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             </div>
@@ -339,7 +339,7 @@ const OmphoenixOlympiad = () => {
         </div>
 
         {/* =========================================================
-            STEP-BY-STEP ADMISSION PROCESS (Consistent with MSat)
+            STEP-BY-STEP ADMISSION PROCESS (Consistent with MCet)
         ========================================================== */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
@@ -387,7 +387,7 @@ const OmphoenixOlympiad = () => {
         </div>
 
         {/* =========================================================
-            BOTTOM CALL-TO-ACTION BANNER (Matches FeeStructure & MSat)
+            BOTTOM CALL-TO-ACTION BANNER (Matches FeeStructure & MCet)
         ========================================================== */}
         <div className="bg-gradient-to-r from-primary-50 via-white to-secondary-50 border border-primary-200/80 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
           <div>

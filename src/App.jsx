@@ -14,7 +14,7 @@ import Contact from './pages/Contact';
 import FeeStructure from './pages/FeeStructure';
 import Scholarships from './pages/Scholarships';
 import OmphoenixOlympiad from './pages/OmphoenixOlympiad';
-import MSat from './pages/MSat';
+import MCet from './pages/MCet';
 import JeeAdvanced from './pages/results/JeeAdvanced';
 import JeeMain from './pages/results/JeeMain';
 import Neet from './pages/results/Neet';
@@ -40,8 +40,10 @@ function App() {
             <Route path="/scholarships/Omphoenix-olympiad" element={<Navigate to="/scholarships/om-phoenix-olympiad" replace />} />
             <Route path="/Omphoenix-olympiad" element={<Navigate to="/scholarships/om-phoenix-olympiad" replace />} />
             <Route path="/om-phoenix-olympiad" element={<Navigate to="/scholarships/om-phoenix-olympiad" replace />} />
-            <Route path="/scholarships/m-sat" element={<MSat />} />
-            <Route path="/pay-m-sat-fee" element={<Navigate to="/scholarships/m-sat" replace />} />
+            <Route path="/scholarships/m-cet" element={<MCet />} />
+            <Route path="/scholarships/m-sat" element={<Navigate to="/scholarships/m-cet" replace />} />
+            <Route path="/pay-m-cet-fee" element={<Navigate to="/scholarships/m-cet" replace />} />
+            <Route path="/pay-m-sat-fee" element={<Navigate to="/scholarships/m-cet" replace />} />
             <Route path="/fee" element={<Navigate to="/fee-structure" replace />} />
             <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />

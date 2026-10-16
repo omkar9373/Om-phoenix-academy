@@ -14,7 +14,7 @@ const FeeStructure = () => {
         'Comprehensive study material & Daily Practice Papers (DPP)',
         'Periodic tests & All India Test Series (AITS)',
         'Doubt-clearing counters & 1-on-1 mentoring',
-        'Scholarships up to 100% via M-SAT',
+        'Scholarships up to 100% via M-CET',
       ],
     },
     {
@@ -27,7 +27,7 @@ const FeeStructure = () => {
         'High-yield question banks & mock test series',
         'Regular parent-teacher academic reviews',
         'Special revision and test-taking speed drills',
-        'Scholarships up to 100% via M-SAT',
+        'Scholarships up to 100% via M-CET',
       ],
     },
     {
@@ -73,12 +73,12 @@ const FeeStructure = () => {
               Looking for Fee Concessions &amp; Scholarships?
             </h3>
             <p className="text-sm text-primary-700">
-              Students can avail up to 100% scholarship on tuition fees through our M-SAT entrance test.
+              Students can avail up to 100% scholarship on tuition fees through our M-CET entrance test.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 shrink-0">
-            <Link to="/scholarships/m-sat" className="btn-flame py-2.5 px-5 text-xs sm:text-sm">
-              Register for M-SAT
+            <Link to="/scholarships/m-cet" className="btn-flame py-2.5 px-5 text-xs sm:text-sm">
+              Register for M-CET
             </Link>
             <Link to="/scholarships/explorescholarships" className="inline-flex items-center px-5 py-2.5 rounded-full border border-primary-300 text-sm font-semibold text-primary-700 hover:bg-primary-100 transition-colors">
               View Scholarships
@@ -147,7 +147,7 @@ const FeeStructure = () => {
             </div>
             <div className="space-y-2">
               <h4 className="font-semibold text-gray-800 text-base">Scholarship Adjustment</h4>
-              <p>Scholarship earned through M-SAT or Olympiads is directly deducted from the second installment of tuition fees.</p>
+              <p>Scholarship earned through M-CET or Olympiads is directly deducted from the second installment of tuition fees.</p>
             </div>
           </div>
         </div>

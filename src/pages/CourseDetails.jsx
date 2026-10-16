@@ -120,7 +120,7 @@ const CourseDetails = () => {
             </div>
             <div>
               <span className="text-[10px] uppercase font-bold text-slate-300 block">Scholarship</span>
-              <span className="text-sm sm:text-base font-extrabold text-amber-300">Up to 100% via M-SAT</span>
+              <span className="text-sm sm:text-base font-extrabold text-amber-300">Up to 100% via M-CET</span>
             </div>
           </div>
         </div>
@@ -229,9 +229,9 @@ const CourseDetails = () => {
                 
                 {/* Scholarship Waiver Box */}
                 <div className="p-3 rounded-xl bg-amber-50 border border-amber-200/80 mb-4">
-                  <span className="text-[10px] font-bold text-amber-800 uppercase tracking-wider block mb-0.5">M-SAT Scholarship</span>
+                  <span className="text-[10px] font-bold text-amber-800 uppercase tracking-wider block mb-0.5">M-CET Scholarship</span>
                   <p className="text-xs font-semibold text-amber-900 leading-tight">
-                    Appear for M-SAT and get up to 100% waiver on tuition fees!
+                    Appear for M-CET and get up to 100% waiver on tuition fees!
                   </p>
                 </div>
 
@@ -245,10 +245,10 @@ const CourseDetails = () => {
                   </Link>
 
                   <Link
-                    to="/scholarships/m-sat"
+                    to="/scholarships/m-cet"
                     className="w-full inline-flex items-center justify-center py-2.5 px-4 rounded-xl bg-white border border-primary-300 text-primary-700 hover:bg-primary-50 font-bold text-xs transition-colors text-center"
                   >
-                    Register for M-SAT Scholarship
+                    Register for M-CET Scholarship
                   </Link>
 
                   <a

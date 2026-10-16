@@ -12,7 +12,7 @@ const PayMSatFee = () => {
     const phone = formData.get('phone');
     const grade = formData.get('grade');
 
-    const message = `*M-SAT Fee Payment Request*\n\n*Student:* ${name}\n*Phone:* ${phone}\n*Class:* ${grade}\n*Test Fee:* ₹200`;
+    const message = `*M-CET Fee Payment Request*\n\n*Student:* ${name}\n*Phone:* ${phone}\n*Class:* ${grade}\n*Test Fee:* ₹200`;
     const whatsappUrl = `https://wa.me/919860651233?text=${encodeURIComponent(message)}`;
 
     setSubmitted(true);
@@ -23,7 +23,7 @@ const PayMSatFee = () => {
     <div className="py-4 sm:py-6 bg-gray-50">
       <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Pay M-SAT Fee"
+          title="Pay M-CET Fee"
           subtitle="Complete your examination registration fee payment securely."
         />
 
@@ -35,7 +35,7 @@ const PayMSatFee = () => {
                 Examination Fee
               </span>
               <h3 className="text-xl font-bold text-gray-900">
-                M-SAT Registration 2026-27
+                M-CET Registration 2026-27
               </h3>
             </div>
             <div className="bg-primary-50 px-5 py-2.5 rounded-xl border border-primary-100 text-right">
@@ -51,7 +51,7 @@ const PayMSatFee = () => {
               </div>
               <h4 className="text-xl font-bold text-gray-900">Payment Request Initiated!</h4>
               <p className="text-sm text-gray-600 max-w-md mx-auto">
-                Our team will confirm your payment receipt and send the M-SAT admit card to your registered WhatsApp number and email.
+                Our team will confirm your payment receipt and send the M-CET admit card to your registered WhatsApp number and email.
               </p>
             </div>
           ) : (

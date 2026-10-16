@@ -31,7 +31,7 @@ const Navbar = () => {
 
     { name: 'Explore Scholarships', path: '/scholarships/explorescholarships' },
     { name: 'Apply for Om Phoenix Olympiad', path: '/scholarships/om-phoenix-olympiad' },
-    { name: 'M-SAT (Admission Test)', path: '/scholarships/m-sat' },
+    { name: 'M-CET (Admission Test)', path: '/scholarships/m-cet' },
 
   ];
 
@@ -129,27 +129,18 @@ const Navbar = () => {
         {/* ── Main row: fixed 76 px height ─────────────────────────── */}
         <div className="flex items-center justify-between h-[76px] gap-4">
 
-          {/* ── LEFT: Logo + Brand name ────────────────────────────── */}
+          {/* ── LEFT: Logo ────────────────────────────── */}
           <Link
             to="/"
             onClick={closeMenu}
-            className="flex items-center gap-2.5 shrink-0 group"
+            className="flex items-center shrink-0 group py-1"
             aria-label="Om Phoenix Learning Academy – Home"
           >
             <img
               src={logo}
               alt="Om Phoenix Learning Academy logo"
-              className="h-12 w-auto object-contain"
+              className="h-13 sm:h-14 md:h-[58px] w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
             />
-            {/* Brand text – two stacked lines, kept compact */}
-            <div className="hidden sm:flex flex-col leading-none">
-              <span className="text-[16px] font-black text-transparent bg-clip-text bg-gradient-to-r from-[#00a8ff] via-[#0082d6] to-[#005087] tracking-tight whitespace-nowrap">
-                OM PHOENIX
-              </span>
-              <span className="text-[10px] font-extrabold text-[#071f38] tracking-widest whitespace-nowrap uppercase mt-0.5">
-                Learning Academy
-              </span>
-            </div>
           </Link>
 
           {/* ── CENTER/RIGHT: Desktop nav ──────────────────────────── */}
