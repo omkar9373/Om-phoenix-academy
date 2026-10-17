@@ -45,7 +45,7 @@ const popularCourses = [
   {
     id: 'foundation',
     title: 'Foundation',
-    subtitle: 'Class 5th - 10th',
+    subtitle: 'CBSE/STATE BOARD Curriculum Syllabus And Foundation',
     to: '/courses/foundation',
     bgClass: 'bg-[#fce7f3] hover:bg-[#fbcfe8] border-[#fbcfe8]',
     iconBgClass: 'bg-[#fbcfe8] text-[#db2777]',
@@ -154,7 +154,11 @@ const PopularCoursesOverlap = () => {
                     >
                       {course.title}
                     </h3>
-                    <p className="text-[11px] sm:text-xs text-slate-600 font-medium line-clamp-1 mt-0.5">
+                    <p
+                      className={`text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5 ${
+                        course.id === 'foundation' ? 'leading-snug' : 'line-clamp-1'
+                      }`}
+                    >
                       {course.subtitle}
                     </p>
                   </div>

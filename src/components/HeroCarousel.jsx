@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Sparkles, 
-  CheckCircle2, 
-  Award, 
-  GraduationCap, 
-  Users, 
+import {
+  ArrowRight,
+  Sparkles,
+  CheckCircle2,
+  Award,
+  GraduationCap,
+  Users,
   BookOpen,
   ChevronLeft,
   ChevronRight
@@ -104,7 +104,7 @@ const slides = [
       name: 'Mrs. Harshada Ma\'am',
       role: 'Academic Director & Foundation Head',
       badge: 'Up to 100% Fee Waiver',
-      secondaryBadge: 'Classes 6th to 12th',
+      secondaryBadge: 'Classes 5th to 12th',
     },
   },
 ];
@@ -163,17 +163,17 @@ const HeroCarousel = () => {
       {/* Background Graphic Elements inspired by the Phoenix Academy Logo Icon */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Left deep angled banner ribbon in navy */}
-        <div 
-          className="absolute -left-12 -top-12 bottom-0 w-32 sm:w-48 md:w-64 bg-[#05162b] transform -skew-x-12 opacity-90 z-0" 
-          aria-hidden="true" 
+        <div
+          className="absolute -left-12 -top-12 bottom-0 w-32 sm:w-48 md:w-64 bg-[#05162b] transform -skew-x-12 opacity-90 z-0"
+          aria-hidden="true"
         />
-        <div 
-          className="absolute left-16 sm:left-32 md:left-48 -top-12 bottom-0 w-8 bg-[#00a8ff]/25 transform -skew-x-12 opacity-40 z-0" 
-          aria-hidden="true" 
+        <div
+          className="absolute left-16 sm:left-32 md:left-48 -top-12 bottom-0 w-8 bg-[#00a8ff]/25 transform -skew-x-12 opacity-40 z-0"
+          aria-hidden="true"
         />
 
         {/* Main vibrant Phoenix gradient: Deep Navy -> Electric Cyan/Blue -> Fiery Phoenix Flame */}
-        <div 
+        <div
           className="absolute inset-0 z-0 opacity-95"
           style={{
             background: 'linear-gradient(110deg, #071f38 0%, #0a2540 22%, #0067ab 45%, #ff5e00 80%, #dc2626 100%)',
@@ -181,31 +181,31 @@ const HeroCarousel = () => {
         />
 
         {/* Radial warm lighting & cyan glows */}
-        <div 
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-[420px] sm:w-[600px] lg:w-[780px] h-[420px] sm:h-[600px] lg:h-[780px] rounded-full bg-gradient-to-br from-amber-400/25 via-orange-500/20 to-transparent blur-3xl pointer-events-none" 
-          aria-hidden="true" 
+        <div
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-[420px] sm:w-[600px] lg:w-[780px] h-[420px] sm:h-[600px] lg:h-[780px] rounded-full bg-gradient-to-br from-amber-400/25 via-orange-500/20 to-transparent blur-3xl pointer-events-none"
+          aria-hidden="true"
         />
-        <div 
-          className="absolute -top-24 left-1/4 w-96 h-96 rounded-full bg-[#00a8ff]/20 blur-3xl pointer-events-none" 
-          aria-hidden="true" 
+        <div
+          className="absolute -top-24 left-1/4 w-96 h-96 rounded-full bg-[#00a8ff]/20 blur-3xl pointer-events-none"
+          aria-hidden="true"
         />
 
         {/* Subtle geometric grid / dots texture */}
-        <div 
-          className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" 
-          aria-hidden="true" 
+        <div
+          className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"
+          aria-hidden="true"
         />
       </div>
 
       {/* Main Hero Container */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 lg:pt-16 pb-24 sm:pb-28 lg:pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
-          
+
           {/* =========================================================
               LEFT COLUMN: Promotional Content & CTAs
           ========================================================== */}
           <div key={`content-${currentSlide}`} className="lg:col-span-7 text-left text-white space-y-5 sm:space-y-6 animate-hero-fade">
-            
+
             {/* Small Badge / Tag */}
             <div className="inline-flex items-center gap-2">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#ffb800] text-slate-950 text-xs sm:text-sm font-black tracking-wider uppercase shadow-md transition-all duration-300">
@@ -268,19 +268,19 @@ const HeroCarousel = () => {
           ========================================================== */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end relative mt-6 lg:mt-0">
             <div className="relative w-full max-w-[380px] sm:max-w-[420px] lg:max-w-[450px]">
-              
+
               {/* Backlight Aura Glow */}
-              <div 
-                className="absolute inset-0 bg-gradient-to-tr from-primary-400/35 via-amber-400/25 to-orange-500/25 rounded-3xl blur-2xl transform scale-105 pointer-events-none" 
+              <div
+                className="absolute inset-0 bg-gradient-to-tr from-primary-400/35 via-amber-400/25 to-orange-500/25 rounded-3xl blur-2xl transform scale-105 pointer-events-none"
                 aria-hidden="true"
               />
 
               {/* Main Portrait Frame with Arch Styling */}
-              <div 
+              <div
                 key={`teacher-${currentSlide}`}
                 className="relative rounded-3xl overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] border-4 border-white/30 bg-gradient-to-b from-orange-500/20 to-black/40 backdrop-blur-xs animate-hero-fade"
               >
-                
+
                 {/* Teacher Image */}
                 <div className="relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-slate-900/40">
                   <img
@@ -332,11 +332,10 @@ const HeroCarousel = () => {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   aria-label={`Go to slide ${index + 1}`}
-                  className={`transition-all duration-300 h-2.5 sm:h-3 rounded-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-transparent ${
-                    isActive
+                  className={`transition-all duration-300 h-2.5 sm:h-3 rounded-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-transparent ${isActive
                       ? 'w-12 sm:w-16 bg-[#071f38] border-2 border-[#ffb800] shadow-lg shadow-amber-500/20'
                       : 'w-7 sm:w-10 bg-white/40 hover:bg-white/70'
-                  }`}
+                    }`}
                 />
               );
             })}
