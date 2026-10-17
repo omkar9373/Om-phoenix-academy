@@ -10,7 +10,7 @@ export const academyStats = {
   topCetScore: '99.60%ile',
   topJeeScore: '99.55%ile',
   address: 'शाकुंतल कमर्शियल बिल्डिंग, दुसरा मजला, सिटी प्राइड स्कूल जवळ, देहू आळंदी रोड, मोशी, पुणे',
-  phones: ['8999393976', '9860641233', '9860651233'],
+  phones: ['8329063312', '9860641233', '9860651233'],
 };
 
 export const class5to10Toppers = [
