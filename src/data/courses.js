@@ -36,10 +36,10 @@ export const courses = [
     id: "foundation",
     title: "Foundation Courses",
     badge: "FOUNDATION",
-    image: "/images/course-foundation.jpg",
+    image: "/images/course-foundation-new.jpg",
     description: "Build a strong academic foundation for school exams and future competitive exams like NTSE and Olympiads.",
     duration: "1 Year",
-    eligibility: "Class 8th, 9th, 10th Students",
+    eligibility: "5th to 10th CBSE/STATE BOARD Curriculum Syllabus And Foundation",
     features: ["Conceptual Clarity", "Mental Ability Training", "School Exam Support"],
     icon: "School"
   }

@@ -97,11 +97,13 @@ const CourseDetails = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-3">
-            {course.title}
+            {course.id === 'foundation' ? 'Syllabus And Foundation' : course.title}
           </h1>
 
           <p className="text-sm sm:text-base text-slate-200 max-w-3xl leading-relaxed mb-6">
-            {course.description}
+            {course.id === 'foundation'
+              ? '5th to 10th CBSE/STATE BOARD Curriculum Syllabus And Foundation'
+              : course.description}
           </p>
 
           {/* Quick Metrics Bar */}
