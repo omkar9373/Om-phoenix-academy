@@ -43,9 +43,11 @@ const popularCourses = [
     icon: Award,
   },
   {
-    id: 'foundation',
-    title: 'Foundation',
-    subtitle: 'CBSE/STATE BOARD Curriculum Syllabus And Foundation',
+    id: ' foundation',
+    title: '  CBSE/STATE BOARD Curriculum Syllabus And Foundation',
+    curriculum: '5th to 10th',
+    classRange: ' CBSE/STATE BOARD Curriculum Syllabus And Foundation',
+    subtitle: '5th to 10th',
     to: '/courses/foundation',
     bgClass: 'bg-[#fce7f3] hover:bg-[#fbcfe8] border-[#fbcfe8]',
     iconBgClass: 'bg-[#fbcfe8] text-[#db2777]',
@@ -147,23 +149,31 @@ const PopularCoursesOverlap = () => {
                 </div>
 
                 {/* Title and Arrow Row */}
-                <div className="flex items-end justify-between gap-1">
-                  <div>
+                <div className="flex items-end justify-between gap-1.5">
+                  <div className="min-w-0 flex-1">
                     <h3
                       className={`text-sm sm:text-[15px] font-extrabold leading-snug tracking-tight ${course.textColor}`}
                     >
                       {course.title}
                     </h3>
-                    <p
-                      className={`text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5 ${
-                        course.id === 'foundation' ? 'leading-snug' : 'line-clamp-1'
-                      }`}
-                    >
-                      {course.subtitle}
-                    </p>
+
+                    {course.id === 'foundation' ? (
+                      <div className="mt-1 space-y-0.5">
+                        <p className="text-[11px] sm:text-xs font-bold text-slate-900 leading-tight">
+                          {course.curriculum || course.subtitle}
+                        </p>
+                        <p className="text-[10px] sm:text-[11px] font-medium text-slate-600">
+                          {course.classRange || '5th to 10th'}
+                        </p>
+                      </div>
+                    ) : (
+                      <p className="text-[11px] sm:text-xs text-slate-600 font-medium line-clamp-1 mt-0.5">
+                        {course.subtitle}
+                      </p>
+                    )}
                   </div>
 
-                  <div className={`p-1 rounded-full text-slate-500 group-hover:text-slate-900 group-hover:translate-x-0.5 transition-all`}>
+                  <div className="p-1 rounded-full text-slate-500 group-hover:text-slate-900 group-hover:translate-x-0.5 transition-all flex-shrink-0 self-end mb-0.5">
                     <ChevronRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -179,8 +189,8 @@ const PopularCoursesOverlap = () => {
             disabled={!canScrollLeft}
             aria-label="Scroll left"
             className={`p-1.5 sm:p-2 rounded-lg transition-all ${canScrollLeft
-                ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 cursor-pointer'
-                : 'text-slate-300 cursor-not-allowed opacity-40'
+              ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 cursor-pointer'
+              : 'text-slate-300 cursor-not-allowed opacity-40'
               }`}
           >
             <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -195,8 +205,8 @@ const PopularCoursesOverlap = () => {
             disabled={!canScrollRight}
             aria-label="Scroll right"
             className={`p-1.5 sm:p-2 rounded-lg transition-all ${canScrollRight
-                ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 cursor-pointer'
-                : 'text-slate-300 cursor-not-allowed opacity-40'
+              ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 cursor-pointer'
+              : 'text-slate-300 cursor-not-allowed opacity-40'
               }`}
           >
             <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
