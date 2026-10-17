@@ -1,14 +1,14 @@
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Clock, 
-  Play, 
-  Award, 
-  BookOpen, 
-  Trophy, 
-  Users, 
-  ChevronRight, 
-  ChevronLeft 
+import {
+  Clock,
+  Play,
+  Award,
+  BookOpen,
+  Trophy,
+  Users,
+  ChevronRight,
+  ChevronLeft
 } from 'lucide-react';
 
 const popularCourses = [
@@ -45,7 +45,7 @@ const popularCourses = [
   {
     id: 'foundation',
     title: 'Foundation',
-    subtitle: 'Class 8th - 10th',
+    subtitle: 'Class 5th - 10th',
     to: '/courses/foundation',
     bgClass: 'bg-[#fce7f3] hover:bg-[#fbcfe8] border-[#fbcfe8]',
     iconBgClass: 'bg-[#fbcfe8] text-[#db2777]',
@@ -102,13 +102,13 @@ const PopularCoursesOverlap = () => {
   };
 
   return (
-    <section 
+    <section
       className="-mt-14 sm:-mt-16 md:-mt-20 lg:-mt-22 relative z-20 w-full px-4 sm:px-6 lg:px-8 mb-0"
       aria-label="Popular Courses Navigation"
     >
       {/* White Overlapping Container */}
       <div className="bg-white rounded-3xl p-5 sm:p-7 md:p-8 shadow-[0_20px_60px_-15px_rgba(15,23,42,0.15)] border border-slate-100">
-        
+
         {/* Top Header Badge */}
         <div className="flex items-center justify-between mb-5 sm:mb-6">
           <div className="inline-flex items-center px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-[#ffb800] to-[#ff5e00] text-slate-950 font-black text-sm sm:text-base tracking-wide shadow-xs">
@@ -158,7 +158,7 @@ const PopularCoursesOverlap = () => {
                       {course.subtitle}
                     </p>
                   </div>
-                  
+
                   <div className={`p-1 rounded-full text-slate-500 group-hover:text-slate-900 group-hover:translate-x-0.5 transition-all`}>
                     <ChevronRight className="w-4 h-4" />
                   </div>
@@ -174,11 +174,10 @@ const PopularCoursesOverlap = () => {
             onClick={() => scroll('left')}
             disabled={!canScrollLeft}
             aria-label="Scroll left"
-            className={`p-1.5 sm:p-2 rounded-lg transition-all ${
-              canScrollLeft
+            className={`p-1.5 sm:p-2 rounded-lg transition-all ${canScrollLeft
                 ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 cursor-pointer'
                 : 'text-slate-300 cursor-not-allowed opacity-40'
-            }`}
+              }`}
           >
             <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
@@ -191,11 +190,10 @@ const PopularCoursesOverlap = () => {
             onClick={() => scroll('right')}
             disabled={!canScrollRight}
             aria-label="Scroll right"
-            className={`p-1.5 sm:p-2 rounded-lg transition-all ${
-              canScrollRight
+            className={`p-1.5 sm:p-2 rounded-lg transition-all ${canScrollRight
                 ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 cursor-pointer'
                 : 'text-slate-300 cursor-not-allowed opacity-40'
-            }`}
+              }`}
           >
             <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
